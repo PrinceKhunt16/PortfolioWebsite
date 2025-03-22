@@ -3,7 +3,7 @@ import React from 'react';
 const ExperiencePage = () => {
     return (
         <div className="p-10 text-gray-800">
-            <h1 className="text-4xl font-bold text-center">Career</h1>
+            <h1 className="text-4xl font-bold text-center">🧗🏻‍♂️ My Experience</h1>
             <div className="mt-6 text-lg">
                 <p>
                     I'm currently in the process of kickstarting my career and am actively looking for internship opportunities in the <strong>AI domain</strong>. 

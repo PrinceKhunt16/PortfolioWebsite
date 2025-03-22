@@ -16,7 +16,7 @@ const HomePage = () => {
       </p>
       <div className="mt-6 flex gap-4">
         <a 
-          href="/projects" 
+          href="./projects" 
           className="bg-gray-700 text-white px-6 py-2 shadow hover:bg-gray-800 transition"
         >
           View Portfolio

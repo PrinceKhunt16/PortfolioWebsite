@@ -70,7 +70,7 @@ const certifications = [
 const CertificationsPage = () => {
     return (
         <div className="p-10 text-gray-800">
-        <h1 className="text-4xl font-bold text-center">My Certifications</h1>
+        <h1 className="text-4xl font-bold text-center">📰 My Certifications</h1>
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2">
             {certifications.map((cert, index) => (
                 <div key={index} className="bg-gradient-to-br from-gray-100 to-gray-400/50 p-6 border-b border-r border-gray-300">
