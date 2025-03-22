@@ -34,7 +34,7 @@ const Sidebar = ({ ml, setMl }) => {
 
     useEffect(() => {
         setMl(isOpen ? 14 : 64);
-    }, [isOpen]);
+    }, [isOpen, setMl]);
 
     return (
         <div className={`min-w-14 h-screen bg-gradient-to-b from-gray-900 to-gray-600/90 text-white fixed top-0 flex flex-col ${isOpen ? 'w-14' : 'w-64'} transition-all duration-300`}>

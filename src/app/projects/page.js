@@ -29,7 +29,7 @@ const projects = [
     {
         title: "Chat to Order - Order food through chat",
         projectImage: "./projects/project-3.png",
-        description: `Chat to Order is an AI-powered web application that allows users to order food through a conversational interface. Leveraging BERT for intent detection and spaCy for Named Entity Recognition (NER), the chatbot intelligently understands user queries, extracts food items, and processes orders. Built with React, Flask, and MongoDB, this project offers a seamless and interactive food ordering experience.`,
+        description: "Chat to Order is an AI-powered web application that allows users to order food through a conversational interface. Leveraging BERT for intent detection and spaCy for Named Entity Recognition (NER), the chatbot intelligently understands user queries, extracts food items, and processes orders. Built with React, Flask, and MongoDB, this project offers a seamless and interactive food ordering experience.",
         techstack: ["NLP", "Langchain", "MERN", "Huggingface", "BERT", "NER", "Spacy"],
         links: [
             {
@@ -41,7 +41,7 @@ const projects = [
     {
         title: "Healthcare AI - One click job search tool",
         projectImage: "./projects/project-4.png",
-        description: `Healthcare AI is a web application designed to improve healthcare interactions by integrating AI-powered features. It offers role-based interfaces for patients and doctors, medical report summarization, a chatbot for health-related queries, personalized YouTube video recommendations, real-time medical news, and an appointment management system.`,
+        description: "Healthcare AI is a web application designed to improve healthcare interactions by integrating AI-powered features. It offers role-based interfaces for patients and doctors, medical report summarization, a chatbot for health-related queries, personalized YouTube video recommendations, real-time medical news, and an appointment management system.",
         techstack: ["RAG", "Langchain", "Flask", "React.js"],
         links: [
             {
