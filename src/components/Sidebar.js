@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { SiNginxproxymanager } from "react-icons/si";
 import { IoMdHome } from "react-icons/io";
 import { MdOutlineSegment } from "react-icons/md";
 import { LiaFilePdf } from "react-icons/lia";
@@ -15,11 +14,9 @@ import { RiStairsFill } from "react-icons/ri";
 
 const Sidebar = ({ ml, setMl }) => {
     const location = usePathname();
-    const [isOpen, setIsOpen] = useState(false);
-    const [isText, setIsText] = useState(false);
+    const [isOpen, setIsOpen] = useState(true);
+    const [isText, setIsText] = useState(true);
     const isActive = (path) => location === path ? 'active-link text-white bg-gradient-to-r from-gray-400 to-gray-900/90' : '';
-
-    console.log(location)
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
