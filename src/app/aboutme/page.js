@@ -25,7 +25,7 @@ const AboutPage = () => {
                     <Image
                         width={56}
                         height={56} 
-                        src="/marwadiuniversity.jpeg" 
+                        src="./marwadiuniversity.jpeg" 
                         alt="Marwadi University Logo" 
                         className="w-14 h-14 pt-1 object-cover shadow-lg"
                     />
