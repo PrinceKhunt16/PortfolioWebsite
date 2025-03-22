@@ -1,7 +1,11 @@
+import Image from "next/image";
+
 const HomePage = () => {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-gray-100 to-gray-300 p-6">
-      <img 
+      <Image
+        width={200}
+        height={200} 
         src="/prince.jpeg"  
         alt="Profile"
         className="w-48 h-48 rounded-full shadow-lg border-4 border-white"

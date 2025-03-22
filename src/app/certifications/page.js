@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 
 const certifications = [
@@ -75,7 +76,9 @@ const CertificationsPage = () => {
                 <div key={index} className="bg-gradient-to-br from-gray-100 to-gray-400/50 p-6 border-b border-r border-gray-300">
                     <div className="flex flex-col gap-2">
                         <div className="relative w-full" style={{ paddingBottom: '75%' }}>
-                            <img 
+                            <Image
+                                width={500}
+                                height={500}
                                 src={cert.certificateImage} 
                                 alt={cert.title} 
                                 className="absolute top-0 left-0 w-full h-full object-cover" 

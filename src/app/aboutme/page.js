@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 
 const AboutPage = () => {
@@ -21,7 +22,9 @@ const AboutPage = () => {
             <div>
                 <h2 className="text-3xl font-bold mb-4">🎓 Education</h2>
                 <div className="flex space-x-4">
-                    <img 
+                    <Image
+                        width={56}
+                        height={56} 
                         src="/marwadiuniversity.jpeg" 
                         alt="Marwadi University Logo" 
                         className="w-14 h-14 pt-1 object-cover shadow-lg"
