@@ -69,7 +69,7 @@ const projects = [
         ]
     },
     {
-        title: "Healthcare AI - One click job search tool",
+        title: "Healthcare AI - AI powered healthcare platform",
         projectImages: [
             "./projects/4/ss1.png",
             "./projects/4/ss2.png",
