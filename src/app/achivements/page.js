@@ -4,8 +4,7 @@ import React from 'react';
 const certifications = [
     {
         title: "Triumphant Victory at SSIP 2023: First Place in Clean and Green Tech with Gujarat CM's Special Prize! 🏆",
-        achivementImage: "./achivements/achivement-1.jpeg", 
-        description: "We are thrilled to announce that our team has clinched the top spot in the Clean and Green Technology category at the SSIP 2023 Hackathon! Our innovative project, which embodies sustainability and technological advancement, won us a ₹2 Lakh prize and a special recognition from Gujarat Chief Minister Shri Bhupendrabhai Patel. This success is a testament to the hard work and dedication of our team. We are excited about the future and eager to continue creating impactful solutions for a greener and more sustainable world! 🌍💡"
+        achivementImage: "./achivements/achivement-1.jpeg"
     }
 ];
 
@@ -27,7 +26,6 @@ const AchivementsPage = () => {
                             />
                         </div>
                         <h3 className="text-xl font-semibold mt-4">{cert.title}</h3>
-                        <p className="text-sm text-gray-600">{cert.description}</p>
                     </div>
                 </div>
             ))}
