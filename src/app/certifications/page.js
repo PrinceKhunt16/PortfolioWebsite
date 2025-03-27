@@ -45,6 +45,13 @@ const certifications = [
         certificateImage: "./certificates/certificate-5.jpg", 
     },
     {
+        title: "Introduction to NoSQL databases",
+        issuedBy: "Infosys Springboard",
+        issuedDate: "Mar 2025",
+        credentialId: "N/A",
+        certificateImage: "./certificates/certificate-10.jpg", 
+    },
+    {
         title: "SQL (Basic)",
         issuedBy: "HackerRank",
         issuedDate: "Aug 2024",
@@ -73,7 +80,7 @@ const CertificationsPage = () => {
         <h1 className="text-4xl font-bold text-center">📰 My Certifications</h1>
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2">
             {certifications.map((cert, index) => (
-                <div key={index} className="bg-gradient-to-br from-gray-100 to-gray-400/50 p-6 border-b border-r border-gray-300">
+                <div key={index} className="bg-gradient-to-br from-gray-100 to-gray-400/50 p-6">
                     <div className="flex flex-col gap-2">
                         <div className="relative w-full" style={{ paddingBottom: '75%' }}>
                             <Image

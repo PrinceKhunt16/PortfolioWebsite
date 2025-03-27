@@ -5,7 +5,7 @@ const ProjectCard = ({ project }) => {
     const [mainImage, setMainImage] = useState(project.projectImages[0]);
 
     return (
-        <div className="bg-gradient-to-br from-gray-100 to-gray-400/50 p-6 border-b border-r border-gray-300">
+        <div className="bg-gradient-to-br from-gray-100 to-gray-400/50 p-6">
             <div className="flex flex-col gap-4">
                 <div className="relative w-full bg-gradient-to-br from-gray-300 to-gray-800/50 flex justify-center items-center">
                     <div className="flex items-center justify-center relative w-full max-w-4xl" style={{ aspectRatio: '16 / 10' }}>
@@ -22,7 +22,7 @@ const ProjectCard = ({ project }) => {
                     {project.projectImages.map((img, index) => (
                         <div
                             key={index}
-                            className={`cursor-pointer border-2 transition-all duration-300 ${mainImage === img ? 'border-gray-500' : 'border-gray-300'}`}
+                            className={`cursor-pointer border-4 transition-all duration-300 ${mainImage === img ? 'border-gray-400' : 'border-gray-300'}`}
                             onClick={() => setMainImage(img)}
                         >
                             <Image
@@ -30,7 +30,7 @@ const ProjectCard = ({ project }) => {
                                 alt={`Thumbnail ${index + 1}`}
                                 width={120}
                                 height={80}
-                                className="hover:opacity-60 w-full h-full object-cover"
+                                className="hover:opacity-40 w-full h-full object-cover"
                             />
                         </div>
                     ))}
