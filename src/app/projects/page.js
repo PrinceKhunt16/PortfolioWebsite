@@ -41,6 +41,10 @@ const projects = [
             {
                 title: "GitHub",
                 url: "https://github.com/PrinceKhunt16/Linkedin-Chat-Assistant-Chrome-Extension"
+            },
+            {
+                title: "Download",
+                url: "https://chromewebstore.google.com/detail/linkedin-chat-assistant/lponolgdemijgndelchhnmnnhmdfblih"
             }
         ]
     },
