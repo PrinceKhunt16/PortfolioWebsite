@@ -59,6 +59,16 @@ const ContactPage = () => {
                             LeetCode
                         </a>
                     </li>
+                    <li>
+                        <a 
+                            href="https://www.youtube.com/@princekhuntYT" 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            className="text-blue-600 hover:text-blue-800"
+                        >
+                            YouTube
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>

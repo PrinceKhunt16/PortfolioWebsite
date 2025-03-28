@@ -11,6 +11,7 @@ import { MdLaptopChromebook } from "react-icons/md";
 import { IoIosInformationCircleOutline } from "react-icons/io";
 import { IoGitNetworkSharp } from "react-icons/io5";
 import { RiStairsFill } from "react-icons/ri";
+import { FaYoutube } from "react-icons/fa6";
 
 const Sidebar = ({ ml, setMl }) => {
     const location = usePathname();
@@ -159,6 +160,20 @@ const Sidebar = ({ ml, setMl }) => {
                             style={{ visibility: !isText ? 'visible' : 'hidden', left: '35px' }}
                         >
                             Achievements
+                        </span>
+                    </Link>
+                </li>
+                <li className={`h-[52px] flex items-center mb-2 px-4 ${isActive('/youtubegallery')}`}>
+                    <Link
+                        href="/youtubegallery"
+                        className={`flex items-center gap-3 w-full text-lg cursor-pointer py-3 font-normal relative`}
+                    >
+                        <FaYoutube size={22} color={`${isActive('/youtubegallery') && "white"}`} />
+                        <span
+                            className={`pt-1 transition-text duration-300 transform absolute ${!isText ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[-5px]'} ease-in-out`}
+                            style={{ visibility: !isText ? 'visible' : 'hidden', left: '35px' }}
+                        >
+                            YouTube Gallery
                         </span>
                     </Link>
                 </li>

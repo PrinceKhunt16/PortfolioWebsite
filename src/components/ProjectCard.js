@@ -49,7 +49,7 @@ const ProjectCard = ({ project }) => {
                         </a>
                     ))}
                 </div>
-                <p className="text-gray-600 text-[18px]">{project.description}</p>
+                <p className="text-gray-700 text-[18px]">{project.description}</p>
                 <ul className="list-none flex gap-2 text-sm font-semibold text-gray-600">
                     {project.techstack.map((tech, index) => (
                         <li key={index} className='flex gap-2 items-center'>
