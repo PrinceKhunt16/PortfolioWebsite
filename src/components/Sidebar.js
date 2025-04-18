@@ -15,8 +15,8 @@ import { FaYoutube } from "react-icons/fa6";
 
 const Sidebar = ({ ml, setMl }) => {
     const location = usePathname();
-    const [isOpen, setIsOpen] = useState(true);
-    const [isText, setIsText] = useState(true);
+    const [isOpen, setIsOpen] = useState(false);
+    const [isText, setIsText] = useState(false);
     const isActive = (path) => location === path ? 'active-link text-white bg-gradient-to-r from-gray-400 to-gray-900/90' : '';
 
     const toggleMenu = () => {
