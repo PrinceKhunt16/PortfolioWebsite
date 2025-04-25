@@ -88,32 +88,29 @@ const projects = [
         ]
     },
     {
-        title: "Healthcare AI - AI powered healthcare platform",
+        title: "NiceNote.ai - AI powered Notes maker",
         projectImages: [
-            "./projects/4/ss1.png",
-            "./projects/4/ss2.png",
-            "./projects/4/ss3.png",
-            "./projects/4/ss4.png",
-            "./projects/4/ss5.png",
-            "./projects/4/ss6.png",
-            "./projects/4/ss7.png",
-            "./projects/4/ss8.png",
-            "./projects/4/ss9.png",
-            "./projects/4/ss10.png",
+            "./projects/8/ss1.png",
+            "./projects/8/ss2.png",
+            "./projects/8/ss3.png",
+            "./projects/8/ss4.png",
+            "./projects/8/ss5.png",
+            "./projects/8/ss6.png",
         ],
         "descriptionPoints": [
-            "Healthcare AI is a web application designed to improve healthcare interactions by integrating AI-powered features.",
-            "It offers role-based interfaces for patients and doctors, enabling tailored experiences for each user group.",
-            "The application provides medical report summarization, helping users quickly understand complex health information.",
-            "A chatbot is available for health-related queries, offering instant support and guidance using AI-driven responses.",
-            "Users receive personalized YouTube video recommendations and real-time medical news to stay informed and engaged.",
-            "An appointment management system streamlines scheduling and enhances the overall patient and doctor experience."
+            "Upload PDFs and automatically extract content using PDF parsing.",
+            "Generate intelligent notes from extracted text using LLM (Groq integration).",
+            "Add custom titles and tags to your notes for better organization.",
+            "View and manage all your notes with edit and delete functionality.",
+            "Built using Next.js, Supabase, React Query, and TailwindCSS.",
+            "Authenticated with Supabase to securely link notes to users.",
+            "Hosted live at: https://nice-note-ai.vercel.app/",
         ],
-        techstack: ["RAG", "Langchain", "Flask", "React.js"],
+        techstack: ["Next.js", "Supabase", "Shadcn"],
         links: [
             {
-                title: "GitHub",
-                url: "https://github.com/PrinceKhunt16/Healthcare-AI-Langchain-FAISS-Database-Olama-Grok-React.js-Flask"
+                title: "NiceNote.ai",
+                url: "https://nice-note-ai.vercel.app/"
             }
         ]
     },
@@ -181,7 +178,37 @@ const projects = [
                 url: "https://github.com/PrinceKhunt16/Vehicle-Insuerance-MLOps-AWS"
             }
         ]
-    }
+    },
+    {
+        title: "Healthcare AI - AI powered healthcare platform",
+        projectImages: [
+            "./projects/4/ss1.png",
+            "./projects/4/ss2.png",
+            "./projects/4/ss3.png",
+            "./projects/4/ss4.png",
+            "./projects/4/ss5.png",
+            "./projects/4/ss6.png",
+            "./projects/4/ss7.png",
+            "./projects/4/ss8.png",
+            "./projects/4/ss9.png",
+            "./projects/4/ss10.png",
+        ],
+        "descriptionPoints": [
+            "Healthcare AI is a web application designed to improve healthcare interactions by integrating AI-powered features.",
+            "It offers role-based interfaces for patients and doctors, enabling tailored experiences for each user group.",
+            "The application provides medical report summarization, helping users quickly understand complex health information.",
+            "A chatbot is available for health-related queries, offering instant support and guidance using AI-driven responses.",
+            "Users receive personalized YouTube video recommendations and real-time medical news to stay informed and engaged.",
+            "An appointment management system streamlines scheduling and enhances the overall patient and doctor experience."
+        ],
+        techstack: ["RAG", "Langchain", "Flask", "React.js"],
+        links: [
+            {
+                title: "GitHub",
+                url: "https://github.com/PrinceKhunt16/Healthcare-AI-Langchain-FAISS-Database-Olama-Grok-React.js-Flask"
+            }
+        ]
+    },
 ];
 
 const ProjectsPage = () => {
