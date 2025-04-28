@@ -3,7 +3,7 @@ import React from 'react';
 
 const AboutPage = () => {
     return (
-        <div className="p-10 text-gray-800">
+        <div className="p-4 md:p-10 text-gray-800">
             <div className="mb-10">
                 <h1 className="text-4xl font-bold">👋 Hello, I'm <span className="text-gray-600">Prince Khunt!</span></h1>
                 <p className="mt-4 text-lg leading-relaxed">

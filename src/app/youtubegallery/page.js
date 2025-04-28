@@ -7,7 +7,7 @@ const YouTubeGalleryPage = () => {
     ]);
 
     return (
-        <div className="p-10 text-gray-800 min-h-screen">
+        <div className="p-4 md:p-10 text-gray-800 min-h-screen">
             <h1 className="text-4xl font-bold mb-6 text-center">📹 YouTube Gallery</h1>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                 {videos.map((video, index) => (

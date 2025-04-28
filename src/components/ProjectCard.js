@@ -5,7 +5,7 @@ const ProjectCard = ({ project }) => {
     const [mainImage, setMainImage] = useState(project.projectImages[0]);
 
     return (
-        <div className="bg-gradient-to-br from-gray-100 to-gray-400/50 p-6">
+        <div className="bg-gradient-to-br from-gray-100 to-gray-400/50 p-2 md:p-6">
             <div className="flex flex-col gap-4">
                 <div className="relative w-full bg-gradient-to-br from-gray-300 to-gray-800/50 flex justify-center items-center">
                     <div className="flex items-center justify-center relative w-full max-w-4xl" style={{ aspectRatio: '16 / 10' }}>

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap');
 @import "tailwindcss";
 
 :root {
@@ -16,6 +16,6 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: "Catamaran", serif;
+  font-family: "Commissioner", serif;
   font-weight: 400;
 }
