@@ -8,7 +8,7 @@ const SkillsPage = () => {
             skills: ["C", "C++", "JavaScript", "Python"]
         },
         {
-            title: "Databases & Tools",
+            title: "Databases / Tools",
             skills: ["MongoDB", "SQL", "Github", "Docker"]
         },
         {
@@ -16,11 +16,11 @@ const SkillsPage = () => {
             skills: ["React", "Node.js", "Express", "RESTful APIs", "Flask", "Next.js"]
         },
         {
-            title: "Data Science & AI",
+            title: "Data Science / AI",
             skills: ["Machine Learning", "Deep Learning", "Generative AI", "Natural Language Processing"]
         },
         {
-            title: "Libraries & Frameworks",
+            title: "Libraries / Frameworks",
             skills: ["Numpy", "Pandas", "Matplotlib / Seaborn", "Scikit-learn", "TensorFlow", "Keras", "PyTorch", "LangChain"]
         },
         {
@@ -42,7 +42,7 @@ const SkillsPage = () => {
                     <h2 className="text-2xl font-semibold text-gray-700">{category.title}</h2>
                     <ul className="list-none pl-6 mt-2">
                         {category.skills.map((skill, idx) => (
-                            <li key={idx} className="text-lg flex gap-2 items-center"><MdOutlineStarPurple500 fontSize={14}/>{skill}</li>
+                            <li key={idx} className="text-xl flex gap-2 items-center"><MdOutlineStarPurple500 fontSize={14}/>{skill}</li>
                         ))}
                     </ul>
                 </div>

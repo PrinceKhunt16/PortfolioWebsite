@@ -6,7 +6,7 @@ const AboutPage = () => {
         <div className="p-4 md:p-10 text-gray-800">
             <div className="mb-10">
                 <h1 className="text-4xl font-bold">👋 Hello, I'm <span className="text-gray-600">Prince Khunt!</span></h1>
-                <p className="mt-4 text-lg leading-relaxed">
+                <p className="text-xl font-medium mt-4 leading-relaxed">
                     💡 2nd-year engineering student passionate about <strong>Data Science</strong> and <strong>AI</strong>. <br />
                     💻 Skilled in <strong>ML, DL, GenAI, and the Full-Stack(MERN) stack</strong>. <br />
                     🚀 Actively seeking a <strong>Data Science internship</strong> to gain industry experience. <br />
@@ -31,8 +31,8 @@ const AboutPage = () => {
                     />
                     <div>
                         <h3 className="text-xl font-semibold">Marwadi University</h3>
-                        <p className="text-gray-600">Bachelor's of Science in <strong>Data Science</strong></p>
-                        <p className="text-gray-500">📅 Jul 2023 – Jul 2026</p>
+                        <p className="text-lg text-gray-600">Bachelor's of Science in <strong>Data Science</strong></p>
+                        <p className="text-lg text-gray-500">📅 Jul 2023 – Jul 2026</p>
                     </div>
                 </div>
             </div>

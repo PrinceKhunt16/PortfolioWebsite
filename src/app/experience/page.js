@@ -4,7 +4,7 @@ const ExperiencePage = () => {
     return (
         <div className="p-4 md:p-10 text-gray-800">
             <h1 className="text-4xl font-bold text-center">🧗🏻‍♂️ My Experience</h1>
-            <div className="mt-6 text-lg">
+            <div className="mt-6 text-xl">
                 <p>
                     I'm currently in the process of kickstarting my career and am actively looking for internship opportunities in the <strong>AI domain</strong>. 
                     My passion lies in areas such as <strong>Machine Learning, Deep Learning, Natural Language Processing, and Computer Vision</strong>, 

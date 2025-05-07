@@ -72,7 +72,7 @@ const Sidebar = ({ ml, setMl }) => {
                     <MdOutlineSegment className='w-[22px]' size={22} />
                 </button>
                 <h1
-                    className={`text-[24px] transition-all duration-300 transform absolute ${!isText ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[-10px]'} ease-in-out`}
+                    className={`text-3xl transition-all duration-300 transform absolute ${!isText ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[-10px]'} ease-in-out`}
                     style={{ visibility: !isText ? 'visible' : 'hidden', left: '50px' }}
                 >
                     Prince Khunt
@@ -82,7 +82,7 @@ const Sidebar = ({ ml, setMl }) => {
                 <li className={`h-[52px] flex items-center mb-2 px-4 ${isActive('/')}`}>
                     <Link
                         href="/"
-                        className={`flex items-center gap-3 w-full text-lg cursor-pointer py-3 font-normal relative`}
+                        className={`flex items-center gap-3 w-full text-xl cursor-pointer py-3 font-normal relative`}
                         onClick={() => {
                             if (isSmallDisplay && !isOpen) {
                                 toggleMenu();
@@ -101,7 +101,7 @@ const Sidebar = ({ ml, setMl }) => {
                 <li className={`h-[52px] flex items-center mb-2 px-4 ${isActive('/aboutme')}`}>
                     <Link
                         href="/aboutme"
-                        className={`flex items-center gap-3 w-full text-lg cursor-pointer py-3 font-normal relative`}
+                        className={`flex items-center gap-3 w-full text-xl cursor-pointer py-3 font-normal relative`}
                         onClick={() => {
                             if (isSmallDisplay && !isOpen) {
                                 toggleMenu();
@@ -120,7 +120,7 @@ const Sidebar = ({ ml, setMl }) => {
                 <li className={`h-[52px] flex items-center mb-2 px-4 ${isActive('/resume')}`}>
                     <Link
                         href="/resume"
-                        className={`flex items-center gap-3 w-full text-lg cursor-pointer py-3 font-normal relative`}
+                        className={`flex items-center gap-3 w-full text-xl cursor-pointer py-3 font-normal relative`}
                         onClick={() => {
                             if (isSmallDisplay && !isOpen) {
                                 toggleMenu();
@@ -139,7 +139,7 @@ const Sidebar = ({ ml, setMl }) => {
                 <li className={`h-[52px] flex items-center mb-2 px-4 ${isActive('/skills')}`}>
                     <Link
                         href="/skills"
-                        className={`flex items-center gap-3 w-full text-lg cursor-pointer py-3 font-normal relative`}
+                        className={`flex items-center gap-3 w-full text-xl cursor-pointer py-3 font-normal relative`}
                         onClick={() => {
                             if (isSmallDisplay && !isOpen) {
                                 toggleMenu();
@@ -158,7 +158,7 @@ const Sidebar = ({ ml, setMl }) => {
                 <li className={`h-[52px] flex items-center mb-2 px-4 ${isActive('/projects')}`}>
                     <Link
                         href="/projects"
-                        className={`flex items-center gap-3 w-full text-lg cursor-pointer py-3 font-normal relative`}
+                        className={`flex items-center gap-3 w-full text-xl cursor-pointer py-3 font-normal relative`}
                         onClick={() => {
                             if (isSmallDisplay && !isOpen) {
                                 toggleMenu();
@@ -177,7 +177,7 @@ const Sidebar = ({ ml, setMl }) => {
                 <li className={`h-[52px] flex items-center mb-2 px-4 ${isActive('/experience')}`}>
                     <Link
                         href="/experience"
-                        className={`flex items-center gap-3 w-full text-lg cursor-pointer py-3 font-normal relative`}
+                        className={`flex items-center gap-3 w-full text-xl cursor-pointer py-3 font-normal relative`}
                         onClick={() => {
                             if (isSmallDisplay && !isOpen) {
                                 toggleMenu();
@@ -196,7 +196,7 @@ const Sidebar = ({ ml, setMl }) => {
                 <li className={`h-[52px] flex items-center mb-2 px-4 ${isActive('/certifications')}`}>
                     <Link
                         href="/certifications"
-                        className={`flex items-center gap-3 w-full text-lg cursor-pointer py-3 font-normal relative`}
+                        className={`flex items-center gap-3 w-full text-xl cursor-pointer py-3 font-normal relative`}
                         onClick={() => {
                             if (isSmallDisplay && !isOpen) {
                                 toggleMenu();
@@ -215,7 +215,7 @@ const Sidebar = ({ ml, setMl }) => {
                 <li className={`h-[52px] flex items-center mb-2 px-4 ${isActive('/achivements')}`}>
                     <Link
                         href="/achivements"
-                        className={`flex items-center gap-3 w-full text-lg cursor-pointer py-3 font-normal relative`}
+                        className={`flex items-center gap-3 w-full text-xl cursor-pointer py-3 font-normal relative`}
                         onClick={() => {
                             if (isSmallDisplay && !isOpen) {
                                 toggleMenu();
@@ -234,7 +234,7 @@ const Sidebar = ({ ml, setMl }) => {
                 <li className={`h-[52px] flex items-center mb-2 px-4 ${isActive('/youtubegallery')}`}>
                     <Link
                         href="/youtubegallery"
-                        className={`flex items-center gap-3 w-full text-lg cursor-pointer py-3 font-normal relative`}
+                        className={`flex items-center gap-3 w-full text-xl cursor-pointer py-3 font-normal relative`}
                         onClick={() => {
                             if (isSmallDisplay && !isOpen) {
                                 toggleMenu();
@@ -253,7 +253,7 @@ const Sidebar = ({ ml, setMl }) => {
                 <li className={`h-[52px] flex items-center mb-2 px-4 ${isActive('/contact')}`}>
                     <Link
                         href="/contact"
-                        className={`flex items-center gap-3 w-full text-lg cursor-pointer py-3 font-normal relative`}
+                        className={`flex items-center gap-3 w-full text-xl cursor-pointer py-3 font-normal relative`}
                         onClick={() => {
                             if (isSmallDisplay && !isOpen) {
                                 toggleMenu();

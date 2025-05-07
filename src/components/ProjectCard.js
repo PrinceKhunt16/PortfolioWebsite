@@ -22,7 +22,7 @@ const ProjectCard = ({ project }) => {
                     {project.projectImages.map((img, index) => (
                         <div
                             key={index}
-                            className={`cursor-pointer border-4 transition-all duration-300 ${mainImage === img ? 'border-gray-400' : 'border-gray-300'}`}
+                            className={`cursor-pointer border-4 transition-all duration-300 ${mainImage === img ? 'border-gray-700' : 'border-gray-300'}`}
                             onClick={() => setMainImage(img)}
                         >
                             <Image
@@ -35,7 +35,7 @@ const ProjectCard = ({ project }) => {
                         </div>
                     ))}
                 </div>
-                <h3 className="text-xl font-semibold">{project.title}</h3>
+                <h3 className="text-2xl font-semibold">{project.title}</h3>
                 <div className="flex gap-2 flex-wrap">
                     {project.links.map((link, index) => (
                         <a
@@ -49,12 +49,12 @@ const ProjectCard = ({ project }) => {
                         </a>
                     ))}
                 </div>
-                <ul className="list-disc list-inside text-gray-700 text-[18px]">
+                <ul className="list-disc list-inside text-gray-700 text-xl">
                     {project.descriptionPoints.map((point, index) => (
                         <li key={index}>{point}</li>
                     ))}
                 </ul>
-                <ul className="list-none flex gap-2 text-sm font-semibold text-gray-600">
+                <ul className="list-none flex gap-2 flex-wrap text-xl font-bold text-gray-600">
                     {project.techstack.map((tech, index) => (
                         <li key={index} className='flex gap-2 items-center'>
                             {tech}

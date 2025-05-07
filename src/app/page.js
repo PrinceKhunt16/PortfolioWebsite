@@ -11,7 +11,7 @@ const HomePage = () => {
         className="w-48 h-48 rounded-full shadow-lg border-4 border-white"
       />
       <h1 className="text-4xl font-bold mt-6 text-gray-800">Prince Khunt</h1>
-      <p className="text-lg text-gray-600 mt-4 text-center max-w-lg">
+      <p className="text-xl font-medium text-gray-600 mt-4 text-center max-w-lg">
         2nd-Year Student || ML || DL || NLP || GenAI || MERN || KAGGLE Contributor || SSIP India Hackathon '23 Winner
       </p>
       <div className="mt-6 flex gap-4">
