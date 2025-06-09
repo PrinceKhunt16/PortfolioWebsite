@@ -7,12 +7,11 @@ const AboutPage = () => {
             <div className="mb-10">
                 <h1 className="text-4xl font-bold">👋 Hello, I'm <span className="text-gray-600">Prince Khunt!</span></h1>
                 <p className="text-xl font-medium mt-4 leading-relaxed">
-                    💡 2nd-year engineering student passionate about <strong>Data Science</strong> and <strong>AI</strong>. <br />
-                    💻 Skilled in <strong>ML, DL, GenAI, and the Full-Stack(MERN) stack</strong>. <br />
+                    💡 3rd / Final year engineering student passionate about <strong>Data Science</strong> and <strong>AI</strong>. <br />
+                    💻 Skilled in <strong>ML, DL, GenAI, MLOps, and the Full-Stack(MERN) stack</strong>. <br />
                     🚀 Actively seeking a <strong>Data Science internship</strong> to gain industry experience. <br />
                     🔥 Currently building <strong>AI-powered projects</strong> that solve real-world problems. <br />
-                    ✨ I enjoy solving real-world problems using <strong>data-driven insights</strong> and building <strong>full-stack applications</strong>. <br />
-                    📚 Expanding my expertise in <strong>MLOps</strong>.
+                    🌟 I enjoy solving real-world problems using <strong>data-driven insights</strong> and building <strong>full-stack applications</strong>. <br />
                 </p>
                 <div className="mt-6 flex space-x-4">
                     <a href="https://www.linkedin.com/in/prince-khunt-linked-in/" target='_blank' className="text-blue-500 hover:text-blue-700">LinkedIn</a>
@@ -32,7 +31,7 @@ const AboutPage = () => {
                     <div>
                         <h3 className="text-xl font-semibold">Marwadi University</h3>
                         <p className="text-lg text-gray-600">Bachelor's of Science in <strong>Data Science</strong></p>
-                        <p className="text-lg text-gray-500">📅 Jul 2023 – Jul 2026</p>
+                        <p className="text-lg text-gray-500">📅 July 2023 – March 2026</p>
                     </div>
                 </div>
             </div>

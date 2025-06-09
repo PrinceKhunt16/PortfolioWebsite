@@ -30,6 +30,10 @@ const SkillsPage = () => {
         {
             title: "Computer Vision",
             skills: ["Computer Vision"]
+        },
+        {
+            title: "Data Structure and Algorithms",
+            skills: []
         }
     ];
 
