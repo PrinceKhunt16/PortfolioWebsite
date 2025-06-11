@@ -88,6 +88,25 @@ const projects = [
         ]
     },
     {
+        title: "Smart Kitchen Helper Chat Assistant",
+        projectImages: [
+            "./projects/9/ss1.png",
+            "./projects/9/ss2.png",
+            "./projects/9/ss3.png",
+        ],
+        "descriptionPoints": [
+            "Developed a domain-specific chatbot using Agentic RAG and open-source LLMs to answer recipe-related queries with document and web search fallback.",
+            "Integrated LangGraph, GroqCloud, FastAPI, and Streamlit to build an interactive and intelligent cooking assistant.",
+        ],
+        techstack: ["LangGraph", "RAG", "GroqCloud"],
+        links: [
+            {
+                title: "GitHub",
+                url: "https://github.com/PrinceKhunt16/Smart-Kitchen-Helper-AgenticRAG"
+            }
+        ]
+    },
+    {
         title: "NiceNote.ai - AI powered Notes maker",
         projectImages: [
             "./projects/8/ss1.png",
