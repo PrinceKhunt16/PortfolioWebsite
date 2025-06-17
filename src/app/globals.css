@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&family=Catamaran:wght@100..900&family=Commissioner:wght@100..900&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Instrument+Serif&family=Lato&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Proza+Libre&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Space+Grotesk:wght@300..700&display=swap');
 @import "tailwindcss";
 
 :root {
@@ -16,6 +17,6 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: "Cardo", serif;
+  font-family: "PT Serif", serif;
   font-weight: 500;
 }
