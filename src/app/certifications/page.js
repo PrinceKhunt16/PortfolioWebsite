@@ -24,6 +24,20 @@ const certifications = [
         certificateImage: "./certificates/certificate-8.jpg", 
     },
     {
+        title: "ML Model in Production with FastAPI and Docker - KGPTalkie",
+        issuedBy: "Udemy",
+        issuedDate: "Jun 2025",
+        credentialId: "UC-d4798c51-bc7e-4843-88ff-006992781e8b",
+        certificateImage: "./certificates/certificate-11.jpg", 
+    },
+    {
+        title: "NPTEL - Introduction to Machine Learning",
+        issuedBy: "NPTEL",
+        issuedDate: "Apr 2025",
+        credentialId: "NPTEL25CS46S355500068",
+        certificateImage: "./certificates/certificate-12.jpg", 
+    },
+    {
         title: "Build Apps with Gemini Pro",
         issuedBy: "Udemy",
         issuedDate: "Nov 2024",
