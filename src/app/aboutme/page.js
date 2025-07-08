@@ -16,6 +16,7 @@ const AboutPage = () => {
                 <div className="mt-6 flex space-x-4">
                     <a href="https://www.linkedin.com/in/prince-khunt-linked-in/" target='_blank' className="text-blue-500 hover:text-blue-700">LinkedIn</a>
                     <a href="https://github.com/PrinceKhunt16/" target='_blank' className="text-gray-500 hover:text-gray-700">GitHub</a>
+                    <a href="https://www.kaggle.com/princekhunt19" target='_blank' className="text-blue-400 hover:text-blue-600">Kaggle</a>
                 </div>
             </div>
             <div>

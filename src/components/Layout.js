@@ -15,7 +15,7 @@ export default function Layout({ children }) {
             {!isAuthPage && (
                 <Sidebar ml={ml} setMl={setMl} />
             )}
-            <main className={`min-h-screen bg-gradient-to-b from-gray-200 to-gray-300/90 w-full ${!isAuthPage && `${ml == 14 && "ml-14"} ${ml == 64 && "ml-64"}`}`}>
+            <main className={`min-h-screen bg-white w-full ${!isAuthPage && `${ml == 14 && "ml-14"} ${ml == 64 && "ml-64"}`}`}>
                 {children}
             </main>
         </div>

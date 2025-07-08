@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const HomePage = () => {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-gray-100 to-gray-300 p-6">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-white p-6">
       <Image
         width={200}
         height={200} 

@@ -17,6 +17,6 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: "PT Serif", serif;
+  font-family: "source-serif-pro, Georgia, Cambria, Times New Roman, Times, serif";
   font-weight: 500;
 }
