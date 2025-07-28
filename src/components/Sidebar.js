@@ -19,11 +19,6 @@ const Sidebar = ({ ml, setMl }) => {
     const [isText, setIsText] = useState(false);
     const [isSmallDisplay, setIsSmallDisplay] = useState(false);
 
-    console.log("--------------------")
-    console.log("isOpen", isOpen);
-    console.log("isText", isText);
-    console.log("isSmallDisplay", isSmallDisplay);
-
     const isActive = (path) => location === path ? 'active-link text-white bg-gradient-to-r from-gray-400 to-gray-900/90' : '';
 
     const toggleMenu = () => {
@@ -72,7 +67,7 @@ const Sidebar = ({ ml, setMl }) => {
                     <MdOutlineSegment className='w-[22px]' size={22} />
                 </button>
                 <h1
-                    className={`text-3xl transition-all duration-300 transform absolute ${!isText ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[-10px]'} ease-in-out`}
+                    className={`text-2xl transition-all duration-300 transform absolute ${!isText ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[-10px]'} ease-in-out`}
                     style={{ visibility: !isText ? 'visible' : 'hidden', left: '50px' }}
                 >
                     Prince Khunt
@@ -91,7 +86,7 @@ const Sidebar = ({ ml, setMl }) => {
                     >
                         <IoMdHome size={22} color={`${isActive('/') && "white"}`} />
                         <span
-                            className={`transition-text duration-300 transform absolute ${!isText ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[-5px]'} ease-in-out`}
+                            className={`text-lg text-lg transition-text duration-300 transform absolute ${!isText ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[-5px]'} ease-in-out`}
                             style={{ visibility: !isText ? 'visible' : 'hidden', left: '35px' }}
                         >
                             Home
@@ -110,7 +105,7 @@ const Sidebar = ({ ml, setMl }) => {
                     >
                         <IoIosInformationCircleOutline size={22} color={`${isActive('/aboutme') && "white"}`} />
                         <span
-                            className={`transition-text duration-300 transform absolute ${!isText ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[-5px]'} ease-in-out`}
+                            className={`text-lg transition-text duration-300 transform absolute ${!isText ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[-5px]'} ease-in-out`}
                             style={{ visibility: !isText ? 'visible' : 'hidden', left: '35px' }}
                         >
                             About Me
@@ -129,7 +124,7 @@ const Sidebar = ({ ml, setMl }) => {
                     >
                         <LiaFilePdf size={22} color={`${isActive('/resume') && "white"}`} />
                         <span
-                            className={`transition-text duration-300 transform absolute ${!isText ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[-5px]'} ease-in-out`}
+                            className={`text-lg transition-text duration-300 transform absolute ${!isText ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[-5px]'} ease-in-out`}
                             style={{ visibility: !isText ? 'visible' : 'hidden', left: '35px' }}
                         >
                             Resume
@@ -148,7 +143,7 @@ const Sidebar = ({ ml, setMl }) => {
                     >
                         <IoGitNetworkSharp size={22} color={`${isActive('/skills') && "white"}`} />
                         <span
-                            className={`transition-text duration-300 transform absolute ${!isText ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[-5px]'} ease-in-out`}
+                            className={`text-lg transition-text duration-300 transform absolute ${!isText ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[-5px]'} ease-in-out`}
                             style={{ visibility: !isText ? 'visible' : 'hidden', left: '35px' }}
                         >
                             Skills
@@ -167,7 +162,7 @@ const Sidebar = ({ ml, setMl }) => {
                     >
                         <MdLaptopChromebook size={22} color={`${isActive('/projects') && "white"}`} />
                         <span
-                            className={`transition-text duration-300 transform absolute ${!isText ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[-5px]'} ease-in-out`}
+                            className={`text-lg transition-text duration-300 transform absolute ${!isText ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[-5px]'} ease-in-out`}
                             style={{ visibility: !isText ? 'visible' : 'hidden', left: '35px' }}
                         >
                             Projects
@@ -186,7 +181,7 @@ const Sidebar = ({ ml, setMl }) => {
                     >
                         <RiStairsFill size={22} color={`${isActive('/experience') && "white"}`} />
                         <span
-                            className={`transition-text duration-300 transform absolute ${!isText ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[-5px]'} ease-in-out`}
+                            className={`text-lg transition-text duration-300 transform absolute ${!isText ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[-5px]'} ease-in-out`}
                             style={{ visibility: !isText ? 'visible' : 'hidden', left: '35px' }}
                         >
                             Experience
@@ -205,7 +200,7 @@ const Sidebar = ({ ml, setMl }) => {
                     >
                         <PiNewspaperClippingLight size={22} color={`${isActive('/certifications') && "white"}`} />
                         <span
-                            className={`transition-text duration-300 transform absolute ${!isText ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[-5px]'} ease-in-out`}
+                            className={`text-lg transition-text duration-300 transform absolute ${!isText ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[-5px]'} ease-in-out`}
                             style={{ visibility: !isText ? 'visible' : 'hidden', left: '35px' }}
                         >
                             Certifications
@@ -224,7 +219,7 @@ const Sidebar = ({ ml, setMl }) => {
                     >
                         <LiaCertificateSolid size={22} color={`${isActive('/achivements') && "white"}`} />
                         <span
-                            className={`transition-text duration-300 transform absolute ${!isText ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[-5px]'} ease-in-out`}
+                            className={`text-lg transition-text duration-300 transform absolute ${!isText ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[-5px]'} ease-in-out`}
                             style={{ visibility: !isText ? 'visible' : 'hidden', left: '35px' }}
                         >
                             Achievements
@@ -243,7 +238,7 @@ const Sidebar = ({ ml, setMl }) => {
                     >
                         <FaYoutube size={22} color={`${isActive('/youtubegallery') && "white"}`} />
                         <span
-                            className={`transition-text duration-300 transform absolute ${!isText ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[-5px]'} ease-in-out`}
+                            className={`text-lg transition-text duration-300 transform absolute ${!isText ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[-5px]'} ease-in-out`}
                             style={{ visibility: !isText ? 'visible' : 'hidden', left: '35px' }}
                         >
                             YouTube Gallery
@@ -262,7 +257,7 @@ const Sidebar = ({ ml, setMl }) => {
                     >
                         <AiOutlineContacts size={22} color={`${isActive('/contact') && "white"}`} />
                         <span
-                            className={`transition-text duration-300 transform absolute ${!isText ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[-5px]'} ease-in-out`}
+                            className={`text-lg transition-text duration-300 transform absolute ${!isText ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[-5px]'} ease-in-out`}
                             style={{ visibility: !isText ? 'visible' : 'hidden', left: '35px' }}
                         >
                             Contact
