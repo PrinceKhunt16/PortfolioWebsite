@@ -12,7 +12,7 @@ const HomePage = () => {
       />
       <h1 className="text-4xl font-bold mt-6 text-gray-800">Prince Khunt</h1>
       <p className="text-xl font-medium text-gray-600 mt-4 text-center max-w-lg">
-        Generative AI Intern at Confedo AI || Ex - Web Developer Intern at Rain Infotech || ML || DL || NLP || MLOps || MERN || KAGGLE Contributor || 1x Hackathon Winner
+        Ex - Generative AI Intern at Confedo AI || Ex - Web Developer Intern at Rain Infotech || ML || DL || NLP || MLOps || MERN || KAGGLE Contributor || 1x Hackathon Winner
       </p>
       <div className="mt-6 flex gap-4">
         <a 

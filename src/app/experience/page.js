@@ -17,9 +17,10 @@ const ExperiencePage = () => {
                             Confedo AI
                         </a> • Pune, Maharastra, India • Remote
                     </p>
-                    <p className="text-lg text-gray-500 mt-1">June 2025 – Present (Ongoing)</p>
+                    <p className="text-lg text-gray-500 mt-1">June 2025 – July 2025 (2 months)</p>
                     <ul className="text-lg list-disc list-inside mt-4 text-gray-600 space-y-1">
-                        <li>I've pursued this internship during my 5th semester to deepen my practical skills.</li>
+                        <li>I've pursued this internship during my 5th semester to deepen my skills. </li>
+                        <li>Contributed to the LLMOps evaluation phase of AI applications by identifying feature gap across competitors.</li>
                     </ul>
                 </div>
                 <div className="bg-white shadow-md p-6 mb-6">
@@ -34,7 +35,7 @@ const ExperiencePage = () => {
                             Rain Infotech
                         </a> • Surat, Gujarat, India • Offsite
                     </p>
-                    <p className="text-lg text-gray-500 mt-1">Mar 2023 – June 2023 (3 months)</p>
+                    <p className="text-lg text-gray-500 mt-1">March 2023 – June 2023 (3 months)</p>
                     <ul className="text-lg list-disc list-inside mt-4 text-gray-600 space-y-1">
                         <li>Developed web applications using Next.js and modern frontend technologies.</li>
                         <li>Learned the fundamentals of web architecture and RESTful API integration.</li>
