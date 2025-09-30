@@ -9,7 +9,7 @@ const AboutPage = () => {
                 <p className="text-xl font-medium mt-4 leading-relaxed">
                     💡 3rd / Final year engineering student passionate about <strong>Data Science</strong> and <strong>AI</strong>. <br />
                     💻 Skilled in <strong>ML, DL, GenAI, MLOps, and the Full-Stack(MERN) stack</strong>. <br />
-                    🚀 Actively seeking a <strong>Data Science internship</strong> to gain industry experience. <br />
+                    🚀 Actively seeking for a <strong>AI/ML Engineer role</strong> to gain industry experience. <br />
                     🔥 Currently building <strong>AI-powered projects</strong> that solve real-world problems. <br />
                     🌟 I enjoy solving real-world problems using <strong>data-driven insights</strong> and building <strong>full-stack applications</strong>. <br />
                 </p>

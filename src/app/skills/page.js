@@ -21,7 +21,7 @@ const SkillsPage = () => {
         },
         {
             title: "Libraries / Frameworks",
-            skills: ["Numpy", "Pandas", "Matplotlib / Seaborn", "Scikit-learn", "TensorFlow", "Keras", "PyTorch", "LangChain"]
+            skills: ["Numpy", "Pandas", "Matplotlib / Seaborn", "Scikit-learn", "TensorFlow", "Keras", "PyTorch", "LangChain", "LangGraph", "AI Agents / MCP Server"]
         },
         {
             title: "Mathematics",

@@ -3,7 +3,7 @@ import Layout from "@/components/Layout";
 
 export const metadata = {
   title: "k_prince",
-  description: "Future Data Scientist!",
+  description: "AI/ML Engineer",
 };
 
 export default function RootLayout({ children }) {

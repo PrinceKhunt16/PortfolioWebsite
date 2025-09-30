@@ -6,6 +6,10 @@ const YouTubeGalleryPage = () => {
         {
             name: "LinkedIn Chat Assistant Extension / Demo / Features Explained / prince khunt",
             url: "https://www.youtube.com/embed/k2ERRWbyfc8",
+        },
+        {
+            name: "AI Code Agent with Gemini / Demo / prince khunt",
+            url: "https://www.youtube.com/embed/rSYPTN6u0XY",
         }
     ]);
 
@@ -25,7 +29,7 @@ const YouTubeGalleryPage = () => {
                                 className="w-full h-full"
                             />
                         </div>
-                        <p className='p-2 text-xl bg-gray-100'>{video.name}</p>
+                        <p className='p-2 text-lg bg-gray-100'>{video.name}</p>
                     </div>
                 ))}
             </div>
