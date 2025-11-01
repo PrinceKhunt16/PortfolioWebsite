@@ -5,16 +5,16 @@ const ExperiencePage = () => {
         <div className="p-4 md:p-10 text-gray-800">
             <h1 className="text-4xl font-bold text-center">🧗🏻‍♂️ My Experience</h1>
             <div className="mt-6 text-xl">
-                <div className="bg-white shadow-md p-6 mb-6">
+                <div className="bg-white shadow-md border border-gray-100 p-6 mb-6">
                     <h2 className="text-2xl font-semibold">Generative AI Intern</h2>
                     <p className="text-gray-700 mt-1 font-medium">
                         <a
-                            href="https://www.confedo-ai.com/"
+                            href="https://evntro.com/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-blue-600 hover:underline"
                         >
-                            Confedo AI
+                            Evntro
                         </a> • Pune, Maharastra, India • Remote
                     </p>
                     <p className="text-lg text-gray-500 mt-1">June 2025 – July 2025 (2 months)</p>
@@ -22,8 +22,8 @@ const ExperiencePage = () => {
                         <li>I've pursued this internship during my 5th semester to deepen my skills. </li>
                         <li>Contributed to the LLMOps evaluation phase of AI applications by identifying feature gap across competitors.</li>
                     </ul>
-                </div>
-                <div className="bg-white shadow-md p-6 mb-6">
+                </div> 
+                <div className="bg-white shadow-md border border-gray-100 p-6 mb-6">
                     <h2 className="text-2xl font-semibold">Web Developer Intern</h2>
                     <p className="text-gray-700 mt-1 font-medium">
                         <a

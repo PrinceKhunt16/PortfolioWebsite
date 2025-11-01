@@ -32,6 +32,31 @@ const projects = [
             }
         ]
     },
+     {
+        title: "Gmail AI Assistant - Chrome Extension",
+        projectImages: [
+            "./projects/10/ss1.png",
+            "./projects/10/ss2.png",
+            "./projects/10/ss3.png",
+            "./projects/10/ss4.png",
+        ],
+        "descriptionPoints": [
+            "Gmail AI Assistant Extension is a productivity tool designed to enhance your mail writing experience.",
+            "It provides AI-generated responses in real-time, helping you craft mails more efficiently while interacting with your mail contacts.",
+            "The extension simplifies your communication and saves time."
+        ],
+        techstack: ["GroqCloudAPI", "Next.js"],
+        links: [
+            {
+                title: "GitHub",
+                url: "https://github.com/PrinceKhunt16/Gmail-AI-Assistant-Chrome-Extension"
+            },
+            {
+                title: "Download",
+                url: "https://chromewebstore.google.com/detail/gmail-ai-assistant/jibmoeefcmpaaiebbhdfocogbinlmkhg?"
+            }
+        ]
+    },
     {
         title: "LinkedIn Chat Assistant - Chrome Extension",
         projectImages: [
