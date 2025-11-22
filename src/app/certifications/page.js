@@ -94,9 +94,9 @@ const CertificationsPage = () => {
         <h1 className="text-4xl font-bold text-center">📰 My Certifications</h1>
         <div className="mt-10 grid grid-cols-1 lg:grid-cols-2">
             {certifications.map((cert, index) => (
-                <div key={index} className="bg-gradient-to-br from-gray-100 to-gray-400/50 p-2 md:p-6">
+                <div key={index} className="p-2">
                     <div className="flex flex-col gap-2">
-                        <div className="relative w-full" style={{ paddingBottom: '75%' }}>
+                        <div className="relative w-full border border-gray-100" style={{ paddingBottom: '75%' }}>
                             <Image
                                 width={500}
                                 height={500}
@@ -105,9 +105,9 @@ const CertificationsPage = () => {
                                 className="absolute top-0 left-0 w-full h-full object-cover" 
                             />
                         </div>
-                        <h3 className="text-xl font-semibold mt-4">{cert.title}</h3>
-                        <p className="text-sm text-gray-600">{cert.issuedBy} - {cert.issuedDate}</p>
-                        <p className="text-sm text-gray-600">Credential ID: {cert.credentialId}</p>
+                        <h3 className="text-xl mt-4 mb-6">{cert.title}</h3>
+                        {/* <p className="text-sm text-gray-600">{cert.issuedBy} - {cert.issuedDate}</p> */}
+                        {/* <p className="text-sm text-gray-600">Credential ID: {cert.credentialId}</p> */}
                     </div>
                 </div>
             ))}

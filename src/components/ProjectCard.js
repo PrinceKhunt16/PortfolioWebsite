@@ -5,7 +5,7 @@ const ProjectCard = ({ project }) => {
     const [mainImage, setMainImage] = useState(project.projectImages[0]);
 
     return (
-        <div className="bg-gradient-to-br from-gray-100 to-gray-400/50 p-2 md:p-6">
+        <div className="p-4">
             <div className="flex flex-col gap-4">
                 <div className="relative w-full bg-gradient-to-br from-gray-300 to-gray-800/50 flex justify-center items-center">
                     <div className="flex items-center justify-center relative w-full max-w-4xl" style={{ aspectRatio: '16 / 10' }}>
@@ -49,12 +49,12 @@ const ProjectCard = ({ project }) => {
                         </a>
                     ))}
                 </div>
-                <ul className="list-disc list-inside text-gray-700 text-xl">
+                <ul className="list-disc list-inside text-gray-700 text-lg">
                     {project.descriptionPoints.map((point, index) => (
                         <li key={index}>{point}</li>
                     ))}
                 </ul>
-                <ul className="list-none flex gap-2 flex-wrap text-xl font-bold text-gray-600">
+                <ul className="list-none flex gap-2 flex-wrap text-lg text-gray-600">
                     {project.techstack.map((tech, index) => (
                         <li key={index} className='flex gap-2 items-center'>
                             {tech}

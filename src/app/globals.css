@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Lato:wght@400;700&display=swap');
 @import "tailwindcss";
 
 :root {
@@ -12,10 +12,10 @@
     --foreground: #171717;
   }
 }
- 
+
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: "Kumbh Sans", serif;
+  font-family: "Lato", serif;
   font-weight: 400;
 } 

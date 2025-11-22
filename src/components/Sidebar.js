@@ -112,6 +112,25 @@ const Sidebar = ({ ml, setMl }) => {
                         </span>
                     </Link>
                 </li>
+                <li className={`h-[52px] flex items-center mb-2 px-4 ${isActive('/experience')}`}>
+                    <Link
+                        href="/experience"
+                        className={`flex items-center gap-3 w-full text-xl cursor-pointer py-3 font-normal relative`}
+                        onClick={() => {
+                            if (isSmallDisplay && !isOpen) {
+                                toggleMenu();
+                            }
+                        }}
+                    >
+                        <RiStairsFill size={22} color={`${isActive('/experience') && "white"}`} />
+                        <span
+                            className={`text-lg transition-text duration-300 transform absolute ${!isText ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[-5px]'} ease-in-out`}
+                            style={{ visibility: !isText ? 'visible' : 'hidden', left: '35px' }}
+                        >
+                            Experience
+                        </span>
+                    </Link>
+                </li>
                 <li className={`h-[52px] flex items-center mb-2 px-4 ${isActive('/resume')}`}>
                     <Link
                         href="/resume"
@@ -166,25 +185,6 @@ const Sidebar = ({ ml, setMl }) => {
                             style={{ visibility: !isText ? 'visible' : 'hidden', left: '35px' }}
                         >
                             Projects
-                        </span>
-                    </Link>
-                </li>
-                <li className={`h-[52px] flex items-center mb-2 px-4 ${isActive('/experience')}`}>
-                    <Link
-                        href="/experience"
-                        className={`flex items-center gap-3 w-full text-xl cursor-pointer py-3 font-normal relative`}
-                        onClick={() => {
-                            if (isSmallDisplay && !isOpen) {
-                                toggleMenu();
-                            }
-                        }}
-                    >
-                        <RiStairsFill size={22} color={`${isActive('/experience') && "white"}`} />
-                        <span
-                            className={`text-lg transition-text duration-300 transform absolute ${!isText ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[-5px]'} ease-in-out`}
-                            style={{ visibility: !isText ? 'visible' : 'hidden', left: '35px' }}
-                        >
-                            Experience
                         </span>
                     </Link>
                 </li>

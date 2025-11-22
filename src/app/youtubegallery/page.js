@@ -29,7 +29,7 @@ const YouTubeGalleryPage = () => {
                                 className="w-full h-full"
                             />
                         </div>
-                        <p className='p-2 text-lg bg-gray-100'>{video.name}</p>
+                        <p className='py-2 text-lg'>{video.name}</p>
                     </div>
                 ))}
             </div>
