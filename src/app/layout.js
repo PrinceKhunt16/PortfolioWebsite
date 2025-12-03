@@ -1,5 +1,12 @@
 import "./globals.css";
 import Layout from "@/components/Layout";
+import localFont from 'next/font/local';
+
+const adobeClean = localFont({
+  src: "../../public/fonts/AdobeClean.otf",
+  variable: "--font-adobe-clean",
+  weight: "400",
+});
 
 export const metadata = {
   title: "k_prince",
@@ -8,7 +15,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning className={adobeClean.variable}>
       <head>
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-7D7YK2Q0GR"></script>
         <script
@@ -37,7 +44,10 @@ export default function RootLayout({ children }) {
           }}
         />
       </head>
-      <body>
+      <body
+        data-new-gr-c-s-check-loaded="14.1264.0"
+        data-gr-ext-installed=""
+      >
         <Layout>
           {children}
         </Layout>
