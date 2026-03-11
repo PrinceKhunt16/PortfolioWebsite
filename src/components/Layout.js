@@ -18,19 +18,17 @@ export default function Layout({ children }) {
     if (!isClient) {
         return (
             <div className="flex">
-                <main className="min-h-screen bg-white w-full ml-64">
-                    {children}
-                </main>
+                <main className="min-h-screen bg-white w-full ml-64">{children}</main>
             </div>
         );
     }
 
     return (
         <div className="flex">
-            {!isAuthPage && (
-                <Sidebar ml={ml} setMl={setMl} />
-            )}
-            <main className={`min-h-screen bg-white w-full ${!isAuthPage && `${ml == 14 && "ml-14"} ${ml == 64 && "ml-64"}`}`}>
+            {!isAuthPage && <Sidebar ml={ml} setMl={setMl} />}
+            <main
+                className={`min-h-screen bg-white w-full ${!isAuthPage && `${ml == 14 && 'ml-14'} ${ml == 64 && 'ml-64'}`}`}
+            >
                 {children}
             </main>
         </div>

@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { IoMdHome } from "react-icons/io";
-import { MdOutlineSegment } from "react-icons/md";
-import { LiaFilePdf } from "react-icons/lia";
-import { LiaCertificateSolid } from "react-icons/lia";
-import { PiNewspaperClippingLight } from "react-icons/pi";
-import { AiOutlineContacts } from "react-icons/ai";
-import { MdLaptopChromebook } from "react-icons/md";
-import { IoIosInformationCircleOutline } from "react-icons/io";
-import { IoGitNetworkSharp } from "react-icons/io5";
-import { RiStairsFill } from "react-icons/ri";
-import { FaYoutube } from "react-icons/fa6";
+import { IoMdHome } from 'react-icons/io';
+import { MdOutlineSegment } from 'react-icons/md';
+import { LiaFilePdf } from 'react-icons/lia';
+import { LiaCertificateSolid } from 'react-icons/lia';
+import { PiNewspaperClippingLight } from 'react-icons/pi';
+import { AiOutlineContacts } from 'react-icons/ai';
+import { MdLaptopChromebook } from 'react-icons/md';
+import { IoIosInformationCircleOutline } from 'react-icons/io';
+import { IoGitNetworkSharp } from 'react-icons/io5';
+import { RiStairsFill } from 'react-icons/ri';
+import { FaYoutube } from 'react-icons/fa6';
 
 const Sidebar = ({ ml, setMl }) => {
     const location = usePathname();
@@ -19,7 +19,10 @@ const Sidebar = ({ ml, setMl }) => {
     const [isText, setIsText] = useState(false);
     const [isSmallDisplay, setIsSmallDisplay] = useState(false);
 
-    const isActive = (path) => location === path ? 'active-link text-white bg-gradient-to-r from-gray-400 to-gray-900/90' : '';
+    const isActive = (path) =>
+        location === path
+            ? 'active-link text-white bg-gradient-to-r from-gray-400 to-gray-900/90'
+            : '';
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
@@ -37,7 +40,7 @@ const Sidebar = ({ ml, setMl }) => {
 
     useEffect(() => {
         const handleResize = () => {
-            if(window.innerWidth <= 800) {
+            if (window.innerWidth <= 800) {
                 setIsSmallDisplay(true);
                 setIsOpen(true);
                 setIsText(true);
@@ -61,10 +64,12 @@ const Sidebar = ({ ml, setMl }) => {
     }, [isOpen, setMl]);
 
     return (
-        <div className={`z-50 min-w-14 h-screen bg-gradient-to-b from-gray-900 to-gray-600 text-white fixed top-0 flex flex-col transition-all duration-300 ${isSmallDisplay ? (!isOpen ? 'w-full' : 'w-14') : (isOpen ? 'w-14' : 'w-64')}`}>
+        <div
+            className={`z-50 min-w-14 h-screen bg-gradient-to-b from-gray-900 to-gray-600 text-white fixed top-0 flex flex-col transition-all duration-300 ${isSmallDisplay ? (!isOpen ? 'w-full' : 'w-14') : isOpen ? 'w-14' : 'w-64'}`}
+        >
             <div className="h-[70px] p-4 pb-2 text-white flex items-center gap-3 relative">
                 <button onClick={toggleMenu} className="text-white cursor-pointer">
-                    <MdOutlineSegment className='w-[22px]' size={22} />
+                    <MdOutlineSegment className="w-[22px]" size={22} />
                 </button>
                 <h1
                     className={`text-2xl transition-all duration-300 transform absolute ${!isText ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[-10px]'} ease-in-out`}
@@ -84,7 +89,7 @@ const Sidebar = ({ ml, setMl }) => {
                             }
                         }}
                     >
-                        <IoMdHome size={22} color={`${isActive('/') && "white"}`} />
+                        <IoMdHome size={22} color={`${isActive('/') && 'white'}`} />
                         <span
                             className={`text-lg text-lg transition-text duration-300 transform absolute ${!isText ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[-5px]'} ease-in-out`}
                             style={{ visibility: !isText ? 'visible' : 'hidden', left: '35px' }}
@@ -103,7 +108,10 @@ const Sidebar = ({ ml, setMl }) => {
                             }
                         }}
                     >
-                        <IoIosInformationCircleOutline size={22} color={`${isActive('/aboutme') && "white"}`} />
+                        <IoIosInformationCircleOutline
+                            size={22}
+                            color={`${isActive('/aboutme') && 'white'}`}
+                        />
                         <span
                             className={`text-lg transition-text duration-300 transform absolute ${!isText ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[-5px]'} ease-in-out`}
                             style={{ visibility: !isText ? 'visible' : 'hidden', left: '35px' }}
@@ -122,7 +130,7 @@ const Sidebar = ({ ml, setMl }) => {
                             }
                         }}
                     >
-                        <RiStairsFill size={22} color={`${isActive('/experience') && "white"}`} />
+                        <RiStairsFill size={22} color={`${isActive('/experience') && 'white'}`} />
                         <span
                             className={`text-lg transition-text duration-300 transform absolute ${!isText ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[-5px]'} ease-in-out`}
                             style={{ visibility: !isText ? 'visible' : 'hidden', left: '35px' }}
@@ -141,7 +149,7 @@ const Sidebar = ({ ml, setMl }) => {
                             }
                         }}
                     >
-                        <LiaFilePdf size={22} color={`${isActive('/resume') && "white"}`} />
+                        <LiaFilePdf size={22} color={`${isActive('/resume') && 'white'}`} />
                         <span
                             className={`text-lg transition-text duration-300 transform absolute ${!isText ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[-5px]'} ease-in-out`}
                             style={{ visibility: !isText ? 'visible' : 'hidden', left: '35px' }}
@@ -160,7 +168,7 @@ const Sidebar = ({ ml, setMl }) => {
                             }
                         }}
                     >
-                        <IoGitNetworkSharp size={22} color={`${isActive('/skills') && "white"}`} />
+                        <IoGitNetworkSharp size={22} color={`${isActive('/skills') && 'white'}`} />
                         <span
                             className={`text-lg transition-text duration-300 transform absolute ${!isText ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[-5px]'} ease-in-out`}
                             style={{ visibility: !isText ? 'visible' : 'hidden', left: '35px' }}
@@ -179,7 +187,10 @@ const Sidebar = ({ ml, setMl }) => {
                             }
                         }}
                     >
-                        <MdLaptopChromebook size={22} color={`${isActive('/projects') && "white"}`} />
+                        <MdLaptopChromebook
+                            size={22}
+                            color={`${isActive('/projects') && 'white'}`}
+                        />
                         <span
                             className={`text-lg transition-text duration-300 transform absolute ${!isText ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[-5px]'} ease-in-out`}
                             style={{ visibility: !isText ? 'visible' : 'hidden', left: '35px' }}
@@ -188,7 +199,9 @@ const Sidebar = ({ ml, setMl }) => {
                         </span>
                     </Link>
                 </li>
-                <li className={`h-[52px] flex items-center mb-2 px-4 ${isActive('/certifications')}`}>
+                <li
+                    className={`h-[52px] flex items-center mb-2 px-4 ${isActive('/certifications')}`}
+                >
                     <Link
                         href="/certifications"
                         className={`flex items-center gap-3 w-full text-xl cursor-pointer py-3 font-normal relative`}
@@ -198,7 +211,10 @@ const Sidebar = ({ ml, setMl }) => {
                             }
                         }}
                     >
-                        <PiNewspaperClippingLight size={22} color={`${isActive('/certifications') && "white"}`} />
+                        <PiNewspaperClippingLight
+                            size={22}
+                            color={`${isActive('/certifications') && 'white'}`}
+                        />
                         <span
                             className={`text-lg transition-text duration-300 transform absolute ${!isText ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[-5px]'} ease-in-out`}
                             style={{ visibility: !isText ? 'visible' : 'hidden', left: '35px' }}
@@ -217,7 +233,10 @@ const Sidebar = ({ ml, setMl }) => {
                             }
                         }}
                     >
-                        <LiaCertificateSolid size={22} color={`${isActive('/achivements') && "white"}`} />
+                        <LiaCertificateSolid
+                            size={22}
+                            color={`${isActive('/achivements') && 'white'}`}
+                        />
                         <span
                             className={`text-lg transition-text duration-300 transform absolute ${!isText ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[-5px]'} ease-in-out`}
                             style={{ visibility: !isText ? 'visible' : 'hidden', left: '35px' }}
@@ -226,7 +245,9 @@ const Sidebar = ({ ml, setMl }) => {
                         </span>
                     </Link>
                 </li>
-                <li className={`h-[52px] flex items-center mb-2 px-4 ${isActive('/youtubegallery')}`}>
+                <li
+                    className={`h-[52px] flex items-center mb-2 px-4 ${isActive('/youtubegallery')}`}
+                >
                     <Link
                         href="/youtubegallery"
                         className={`flex items-center gap-3 w-full text-xl cursor-pointer py-3 font-normal relative`}
@@ -236,7 +257,7 @@ const Sidebar = ({ ml, setMl }) => {
                             }
                         }}
                     >
-                        <FaYoutube size={22} color={`${isActive('/youtubegallery') && "white"}`} />
+                        <FaYoutube size={22} color={`${isActive('/youtubegallery') && 'white'}`} />
                         <span
                             className={`text-lg transition-text duration-300 transform absolute ${!isText ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[-5px]'} ease-in-out`}
                             style={{ visibility: !isText ? 'visible' : 'hidden', left: '35px' }}
@@ -255,7 +276,7 @@ const Sidebar = ({ ml, setMl }) => {
                             }
                         }}
                     >
-                        <AiOutlineContacts size={22} color={`${isActive('/contact') && "white"}`} />
+                        <AiOutlineContacts size={22} color={`${isActive('/contact') && 'white'}`} />
                         <span
                             className={`text-lg transition-text duration-300 transform absolute ${!isText ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[-5px]'} ease-in-out`}
                             style={{ visibility: !isText ? 'visible' : 'hidden', left: '35px' }}
@@ -267,6 +288,6 @@ const Sidebar = ({ ml, setMl }) => {
             </ul>
         </div>
     );
-}
+};
 
 export default Sidebar;

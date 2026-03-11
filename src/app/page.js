@@ -1,36 +1,37 @@
-import Image from "next/image";
+'use client';
+
+import Navbar from '@/components/Navbar';
+import HeroSection from '@/components/HeroSection';
+import AboutSection from '@/components/AboutSection';
+import EducationSection from '@/components/EducationSection';
+import ExperienceSection from '@/components/ExperienceSection';
+import ProjectsSection from '@/components/ProjectsSection';
+import SkillsSection from '@/components/SkillsSection';
+import CertificationsSection from '@/components/CertificationsSection';
+import AchievementsSection from '@/components/AchievementsSection';
+import YouTubeSection from '@/components/YouTubeSection';
+import ContactSection from '@/components/ContactSection';
+import Footer from '@/components/Footer';
 
 const HomePage = () => {
-  return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-white p-6">
-      <Image
-        width={200}
-        height={200}
-        src="./prince.jpeg"
-        alt="Profile"
-        className="w-48 h-48 rounded-full shadow-lg border-4 border-white"
-      />
-      <h1 className="text-4xl font-bold mt-6 text-gray-800">Prince Khunt</h1>
-      <p className="text-xl text-gray-600 mt-4 text-center max-w-lg">
-        Junior AI Developer - Vertical Systems || ML || DL || GenAI || MERN || KAGGLE 2x Expert || SSIP Hackathon Winner
-      </p>
-      <div className="mt-6 flex gap-4">
-        <a
-          href="./projects"
-          className="bg-gray-700 text-white px-6 py-2 shadow hover:bg-gray-800 transition"
-        >
-          View Portfolio
-        </a>
-        <a
-          href="/resume.pdf"
-          download
-          className="bg-gray-800 text-white px-6 py-2 shadow hover:bg-gray-900 transition"
-        >
-          Download Resume
-        </a>
-      </div>
-    </div>
-  );
+    return (
+        <>
+            <Navbar />
+            <main>
+                <HeroSection />
+                <AboutSection />
+                <EducationSection />
+                <ExperienceSection />
+                <ProjectsSection />
+                <SkillsSection />
+                <CertificationsSection />
+                <AchievementsSection />
+                <YouTubeSection />
+                <ContactSection />
+            </main>
+            <Footer />
+        </>
+    );
 };
 
 export default HomePage;

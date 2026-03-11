@@ -1,21 +1,167 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Lato:wght@400;700&display=swap'); */
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Cardo:ital,wght@0,400;0,700;1,400&display=swap');
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --bg-primary: #0b1120;
+    --bg-secondary: #111827;
+    --accent-blue: #3b82f6;
+    --accent-yellow: #facc15;
+    --gradient-start: #3b82f6;
+    --gradient-end: #9333ea;
+    --text-primary: #e5e7eb;
+    --text-muted: #9ca3af;
+    --card-bg: #1f2937;
+    --font-averta: var(--font-averta-loaded), system-ui, sans-serif;
+    --font-merriweather: 'Merriweather', Georgia, serif;
+    --font-cardo: 'Cardo', Georgia, serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #ffffff;
-    --foreground: #171717;
-  }
+* {
+    border-radius: 0 !important;
+    scroll-behavior: smooth;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: var(--font-adobe-clean), serif;
-  font-weight: 400;
-} 
+    color: var(--text-primary);
+    background: var(--bg-primary);
+    font-family: var(--font-averta);
+    font-weight: 400;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+.font-title {
+    font-family: var(--font-merriweather);
+}
+
+h3,
+h4,
+.font-subtitle {
+    font-family: var(--font-cardo);
+}
+
+p,
+a,
+button,
+span,
+li,
+input,
+textarea,
+label {
+    font-family: var(--font-averta);
+}
+
+::selection {
+    background: var(--accent-blue);
+    color: white;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--card-bg);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-blue);
+}
+
+@keyframes float {
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes gradient-shift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes pulse-glow {
+    0%,
+    100% {
+        box-shadow: 0 0 20px rgba(59, 130, 246, 0.2);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(59, 130, 246, 0.4);
+    }
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+    animation: float 6s ease-in-out 2s infinite;
+}
+
+.animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient-shift 4s ease infinite;
+}
+
+.animate-pulse-glow {
+    animation: pulse-glow 3s ease-in-out infinite;
+}
+
+.gradient-text {
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.glass {
+    background: rgba(17, 24, 39, 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.card-hover {
+    transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.card-glow:hover {
+    box-shadow:
+        0 0 30px rgba(59, 130, 246, 0.15),
+        0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.tilt-card {
+    transition: transform 0.3s ease;
+    transform-style: preserve-3d;
+}
+
+.tilt-card:hover {
+    transform: perspective(1000px) rotateX(2deg) rotateY(-2deg) translateY(-4px);
+}
+
+section {
+    scroll-margin-top: 80px;
+}
