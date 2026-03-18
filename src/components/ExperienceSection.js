@@ -9,10 +9,20 @@ const experiences = [
         company: 'Vertical Systems',
         companyUrl: 'https://www.verticalsystems.io/',
         location: 'Vancouver, British Columbia, Canada • Remote',
-        duration: 'Nov 2025 – Feb 2026 (4 months)',
+        duration: 'Nov 2025 – Present (5 months)',
         points: [
             'Completed this internship during my 6th semester.',
             'Spearheaded the end-to-end development of a Full Stack AI Solution, managing the lifecycle from initial design to deployment and implementing AI-powered automation to optimize task efficiency.',
+        ],
+    },
+    {
+        role: 'AI/ML Project Tutorial Instructor (Freelance)',
+        company: 'Apna College',
+        companyUrl: 'https://www.apnacollege.in/',
+        location: 'India • Remote',
+        duration: 'March 2026 – Present (1 month)',
+        points: [
+            'Developed practical AI projects for educational purposes, including a real-time exercise coaching system using computer vision and pose estimation.'
         ],
     },
     {

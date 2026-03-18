@@ -40,7 +40,7 @@ const EducationSection = () => {
                                         Bachelor&apos;s of Science in <strong>Data Science</strong>
                                     </p>
                                     <p className="text-[var(--text-muted)] text-sm mt-1">
-                                        July 2023 &ndash; March 2026
+                                        July 2023 &ndash; Feb 2026
                                     </p>
                                 </div>
                             </div>
