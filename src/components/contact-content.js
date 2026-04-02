@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import SectionTitle from './SectionTitle';
+import ContentTitle from './content-title';
 import { FaLinkedin, FaGithub, FaKaggle, FaYoutube } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import { SiLeetcode } from 'react-icons/si';
@@ -45,11 +45,11 @@ const socials = [
     },
 ];
 
-const ContactSection = () => {
+const ContactContent = () => {
     return (
         <section id="contact" className="py-24 px-4">
             <div className="max-w-4xl mx-auto">
-                <SectionTitle
+                <ContentTitle
                     title="Get In Touch"
                     subtitle="Feel free to reach out or connect with me on any platform"
                 />
@@ -149,4 +149,4 @@ const ContactSection = () => {
     );
 };
 
-export default ContactSection;
+export default ContactContent;

@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import SectionTitle from './SectionTitle';
+import ContentTitle from './content-title';
 
 const certifications = [
     {
@@ -91,11 +91,11 @@ const certifications = [
     },
 ];
 
-const CertificationsSection = () => {
+const CertificationsContent = () => {
     return (
         <section id="certifications" className="py-24 px-4 bg-[var(--bg-secondary)]">
             <div className="max-w-6xl mx-auto">
-                <SectionTitle
+                <ContentTitle
                     title="Certifications"
                     subtitle="Continuous learning and professional development"
                 />
@@ -139,4 +139,4 @@ const CertificationsSection = () => {
     );
 };
 
-export default CertificationsSection;
+export default CertificationsContent;

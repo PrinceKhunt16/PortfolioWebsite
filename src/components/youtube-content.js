@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import SectionTitle from './SectionTitle';
+import ContentTitle from './content-title';
 
 const videos = [
     {
@@ -18,11 +18,11 @@ const videos = [
     },
 ];
 
-const YouTubeSection = () => {
+const YouTubeContent = () => {
     return (
         <section id="youtube" className="py-24 px-4 bg-[var(--bg-secondary)]">
             <div className="max-w-6xl mx-auto">
-                <SectionTitle title="YouTube" subtitle="Video demos and tutorials" />
+                <ContentTitle title="YouTube" subtitle="Video demos and tutorials" />
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {videos.map((video, index) => (
@@ -65,4 +65,4 @@ const YouTubeSection = () => {
     );
 };
 
-export default YouTubeSection;
+export default YouTubeContent;

@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import SectionTitle from './SectionTitle';
+import ContentTitle from './content-title';
 import { FaPython, FaReact, FaNodeJs, FaDocker, FaGithub, FaDatabase } from 'react-icons/fa';
 import {
     SiTensorflow,
@@ -86,11 +86,11 @@ const skillCategories = [
     },
 ];
 
-const SkillsSection = () => {
+const SkillsContent = () => {
     return (
         <section id="skills" className="py-24 px-4 bg-[var(--bg-secondary)]">
             <div className="max-w-6xl mx-auto">
-                <SectionTitle title="Skills" subtitle="Technologies and tools I work with" />
+                <ContentTitle title="Skills" subtitle="Technologies and tools I work with" />
 
                 <div className="space-y-12">
                     {skillCategories.map((category, catIdx) => (
@@ -134,4 +134,4 @@ const SkillsSection = () => {
     );
 };
 
-export default SkillsSection;
+export default SkillsContent;

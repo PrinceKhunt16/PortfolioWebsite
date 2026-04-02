@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import SectionTitle from './SectionTitle';
+import ContentTitle from './content-title';
 
 const achievements = [
     {
@@ -12,11 +12,11 @@ const achievements = [
     },
 ];
 
-const AchievementsSection = () => {
+const AchievementsContent = () => {
     return (
         <section id="achievements" className="py-24 px-4">
             <div className="max-w-6xl mx-auto">
-                <SectionTitle title="Achievements" subtitle="Milestones and recognitions" />
+                <ContentTitle title="Achievements" subtitle="Milestones and recognitions" />
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {achievements.map((achievement, index) => (
@@ -91,4 +91,4 @@ const AchievementsSection = () => {
     );
 };
 
-export default AchievementsSection;
+export default AchievementsContent;

@@ -1,33 +1,33 @@
 'use client';
 
-import Navbar from '@/components/Navbar';
-import HeroSection from '@/components/HeroSection';
-import AboutSection from '@/components/AboutSection';
-import EducationSection from '@/components/EducationSection';
-import ExperienceSection from '@/components/ExperienceSection';
-import ProjectsSection from '@/components/ProjectsSection';
-import SkillsSection from '@/components/SkillsSection';
-import CertificationsSection from '@/components/CertificationsSection';
-import AchievementsSection from '@/components/AchievementsSection';
-import YouTubeSection from '@/components/YouTubeSection';
-import ContactSection from '@/components/ContactSection';
-import Footer from '@/components/Footer';
+import Navbar from '@/components/navbar-block';
+import HeroContent from '@/components/hero-content';
+import AboutContent from '@/components/about-content';
+import EducationContent from '@/components/education-content';
+import ExperienceContent from '@/components/experience-content';
+import ProjectsContent from '@/components/projects-content';
+import SkillsContent from '@/components/skills-content';
+import CertificationsContent from '@/components/certifications-content';
+import AchievementsContent from '@/components/achievements-content';
+import YouTubeContent from '@/components/youtube-content';
+import ContactContent from '@/components/contact-content';
+import Footer from '@/components/footer-block';
 
 const HomePage = () => {
     return (
         <>
             <Navbar />
             <main>
-                <HeroSection />
-                <AboutSection />
-                <EducationSection />
-                <ExperienceSection />
-                <ProjectsSection />
-                <SkillsSection />
-                <CertificationsSection />
-                <AchievementsSection />
-                <YouTubeSection />
-                <ContactSection />
+                <HeroContent />
+                <AboutContent />
+                <EducationContent />
+                <ExperienceContent />
+                <ProjectsContent />
+                <SkillsContent />
+                <CertificationsContent />
+                <AchievementsContent />
+                <YouTubeContent />
+                <ContactContent />
             </main>
             <Footer />
         </>

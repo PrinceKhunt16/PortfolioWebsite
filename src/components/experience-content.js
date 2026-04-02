@@ -1,28 +1,28 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import SectionTitle from './SectionTitle';
+import ContentTitle from './content-title';
 
 const experiences = [
-    {
-        role: 'AI Developer Intern',
-        company: 'Vertical Systems',
-        companyUrl: 'https://www.verticalsystems.io/',
-        location: 'Vancouver, British Columbia, Canada • Remote',
-        duration: 'Nov 2025 – Present (5 months)',
-        points: [
-            'Completed this internship during my 6th semester.',
-            'Spearheaded the end-to-end development of a Full Stack AI Solution, managing the lifecycle from initial design to deployment and implementing AI-powered automation to optimize task efficiency.',
-        ],
-    },
     {
         role: 'AI/ML Project Tutorial Instructor (Freelance)',
         company: 'Apna College',
         companyUrl: 'https://www.apnacollege.in/',
         location: 'India • Remote',
-        duration: 'March 2026 – Present (1 month)',
+        duration: 'Mar 2026 – Apr 2026 (2 mon)',
         points: [
             'Developed practical AI projects for educational purposes, including a real-time exercise coaching system using computer vision and pose estimation.'
+        ],
+    },
+    {
+        role: 'AI Developer Intern',
+        company: 'Vertical Systems',
+        companyUrl: 'https://www.verticalsystems.io/',
+        location: 'Vancouver, British Columbia, Canada • Remote',
+        duration: 'Nov 2025 – Mar 2026 (5 mon)',
+        points: [
+            'Completed this internship during my 6th semester.',
+            'Spearheaded the end-to-end development of a Full Stack AI Solution, managing the lifecycle from initial design to deployment and implementing AI-powered automation to optimize task efficiency.',
         ],
     },
     {
@@ -30,7 +30,7 @@ const experiences = [
         company: 'Rain Infotech',
         companyUrl: 'https://www.raininfotech.com/',
         location: 'Surat, Gujarat, India • Offsite',
-        duration: 'March 2023 – June 2023 (3 months)',
+        duration: 'Mar 2023 – Jun 2023 (3 mon)',
         points: [
             'Developed web applications using Next.js and modern frontend technologies.',
             'Mastered the MERN stack to deliver scalable web applications.',
@@ -39,11 +39,11 @@ const experiences = [
     },
 ];
 
-const ExperienceSection = () => {
+const ExperienceContent = () => {
     return (
         <section id="experience" className="py-24 px-4">
             <div className="max-w-4xl mx-auto">
-                <SectionTitle title="Experience" subtitle="My professional journey" />
+                <ContentTitle title="Experience" subtitle="My professional journey" />
 
                 <div className="relative">
                     {/* Timeline line */}
@@ -117,4 +117,4 @@ const ExperienceSection = () => {
     );
 };
 
-export default ExperienceSection;
+export default ExperienceContent;

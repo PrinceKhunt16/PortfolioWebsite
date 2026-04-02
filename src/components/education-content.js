@@ -2,13 +2,13 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import SectionTitle from './SectionTitle';
+import ContentTitle from './content-title';
 
-const EducationSection = () => {
+const EducationContent = () => {
     return (
         <section className="py-24 px-4 bg-[var(--bg-secondary)]">
             <div className="max-w-6xl mx-auto">
-                <SectionTitle title="Education" subtitle="My academic journey" />
+                <ContentTitle title="Education" subtitle="My academic journey" />
 
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
@@ -52,4 +52,4 @@ const EducationSection = () => {
     );
 };
 
-export default EducationSection;
+export default EducationContent;

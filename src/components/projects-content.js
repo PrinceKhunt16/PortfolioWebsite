@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import SectionTitle from './SectionTitle';
+import ContentTitle from './content-title';
 
 const projects = [
     {
@@ -317,11 +317,11 @@ const ProjectCard = ({ project, index }) => {
     );
 };
 
-const ProjectsSection = () => {
+const ProjectsContent = () => {
     return (
         <section id="projects" className="py-24 px-4">
             <div className="max-w-7xl mx-auto">
-                <SectionTitle
+                <ContentTitle
                     title="Projects"
                     subtitle="A showcase of my work building AI-powered solutions"
                 />
@@ -336,4 +336,4 @@ const ProjectsSection = () => {
     );
 };
 
-export default ProjectsSection;
+export default ProjectsContent;

@@ -1,9 +1,9 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import SectionTitle from './SectionTitle';
+import ContentTitle from './content-title';
 
-const AboutSection = () => {
+const AboutContent = () => {
     const highlights = [
         { icon: '🎓', text: 'Graduate in B.Sc Data Science' },
         { icon: '🤖', text: 'AI / ML focused developer' },
@@ -15,7 +15,7 @@ const AboutSection = () => {
     return (
         <section id="about" className="py-24 px-4">
             <div className="max-w-6xl mx-auto">
-                <SectionTitle title="About Me" subtitle="Get to know me better" />
+                <ContentTitle title="About Me" subtitle="Get to know me better" />
 
                 <div className="grid md:grid-cols-2 gap-12 items-center">
                     {/* Left - text */}
@@ -106,4 +106,4 @@ const AboutSection = () => {
     );
 };
 
-export default AboutSection;
+export default AboutContent;

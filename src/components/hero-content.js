@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
-const HeroSection = () => {
+const HeroContent = () => {
     return (
         <section
             id="home"
@@ -114,4 +114,4 @@ const HeroSection = () => {
     );
 };
 
-export default HeroSection;
+export default HeroContent;

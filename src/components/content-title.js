@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 
-const SectionTitle = ({ title, subtitle }) => {
+const ContentTitle = ({ title, subtitle }) => {
     return (
         <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -24,4 +24,4 @@ const SectionTitle = ({ title, subtitle }) => {
     );
 };
 
-export default SectionTitle;
+export default ContentTitle;

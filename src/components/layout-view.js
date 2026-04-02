@@ -2,7 +2,7 @@
 
 import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
-import Sidebar from './Sidebar';
+import Sidebar from '@components/sidebar';
 
 export default function Layout({ children }) {
     const pathname = usePathname();
