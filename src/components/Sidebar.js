@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { IoMdHome } from 'react-icons/io';
 import { MdOutlineSegment } from 'react-icons/md';
@@ -38,6 +37,41 @@ const Sidebar = ({ ml, setMl }) => {
         setMl(!isOpen ? 14 : 64);
     };
 
+    const closeSidebarOnMobile = () => {
+        if (isSmallDisplay) {
+            setIsOpen(true);
+            setIsText(true);
+            setMl(14);
+        }
+    };
+
+    const goToSection = (e, sectionHash) => {
+        e.preventDefault();
+
+        const id = sectionHash.replace('#', '');
+
+        setTimeout(() => {
+            const element = document.getElementById(id);
+
+            if (element) {
+                const yOffset = -70; 
+                const y =
+                    element.getBoundingClientRect().top +
+                    window.pageYOffset +
+                    yOffset;
+
+                window.scrollTo({
+                    top: y,
+                    behavior: 'smooth',
+                });
+
+                window.history.pushState(null, '', sectionHash);
+            }
+        }, 100);
+
+        closeSidebarOnMobile();
+    };
+
     useEffect(() => {
         const handleResize = () => {
             if (window.innerWidth <= 800) {
@@ -57,7 +91,7 @@ const Sidebar = ({ ml, setMl }) => {
         return () => {
             window.removeEventListener('resize', handleResize);
         };
-    }, []);
+    }, [setMl]);
 
     useEffect(() => {
         setMl(isOpen ? 14 : 64);
@@ -65,225 +99,123 @@ const Sidebar = ({ ml, setMl }) => {
 
     return (
         <div
-            className={`z-50 min-w-14 h-screen bg-gradient-to-b from-gray-900 to-gray-600 text-white fixed top-0 flex flex-col transition-all duration-300 ${isSmallDisplay ? (!isOpen ? 'w-full' : 'w-14') : isOpen ? 'w-14' : 'w-64'}`}
+            className={`z-50 min-w-14 h-screen bg-gradient-to-b from-gray-900 to-gray-600 text-white fixed top-0 flex flex-col transition-all duration-300 ${isSmallDisplay
+                    ? !isOpen
+                        ? 'w-full'
+                        : 'w-14'
+                    : isOpen
+                        ? 'w-14'
+                        : 'w-64'
+                }`}
         >
-            <div className="h-[70px] p-4 pb-2 text-white flex items-center gap-3 relative">
-                <button onClick={toggleMenu} className="text-white cursor-pointer">
-                    <MdOutlineSegment className="w-[22px]" size={22} />
+            <div className="h-[70px] p-4 pb-2 flex items-center gap-3 relative">
+                <button onClick={toggleMenu} className="cursor-pointer">
+                    <MdOutlineSegment size={22} />
                 </button>
+
                 <h1
-                    className={`text-2xl transition-all duration-300 transform absolute ${!isText ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[-10px]'} ease-in-out`}
-                    style={{ visibility: !isText ? 'visible' : 'hidden', left: '50px' }}
+                    className={`text-2xl transition-all duration-300 transform absolute ${!isText
+                            ? 'opacity-100 translate-x-0'
+                            : 'opacity-0 translate-x-[-10px]'
+                        }`}
+                    style={{
+                        visibility: !isText ? 'visible' : 'hidden',
+                        left: '50px',
+                    }}
                 >
                     Prince Khunt
                 </h1>
             </div>
-            <ul className="list-none flex-1">
+
+            <ul className="flex-1">
                 <li className={`h-[52px] flex items-center mb-2 px-4 ${isActive('/')}`}>
-                    <Link
-                        href="/"
-                        className={`flex items-center gap-3 w-full text-xl cursor-pointer py-3 font-normal relative`}
-                        onClick={() => {
-                            if (isSmallDisplay && !isOpen) {
-                                toggleMenu();
-                            }
-                        }}
-                    >
-                        <IoMdHome size={22} color={`${isActive('/') && 'white'}`} />
-                        <span
-                            className={`text-lg text-lg transition-text duration-300 transform absolute ${!isText ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[-5px]'} ease-in-out`}
-                            style={{ visibility: !isText ? 'visible' : 'hidden', left: '35px' }}
-                        >
+                    <a href="#home" onClick={(e) => goToSection(e, '#home')} className="flex items-center gap-3 w-full text-xl py-3 relative">
+                        <IoMdHome size={22} />
+                        <span className={`absolute left-[35px] ${!isText ? 'opacity-100' : 'opacity-0'}`}>
                             Home
                         </span>
-                    </Link>
+                    </a>
                 </li>
+
                 <li className={`h-[52px] flex items-center mb-2 px-4 ${isActive('/aboutme')}`}>
-                    <Link
-                        href="/aboutme"
-                        className={`flex items-center gap-3 w-full text-xl cursor-pointer py-3 font-normal relative`}
-                        onClick={() => {
-                            if (isSmallDisplay && !isOpen) {
-                                toggleMenu();
-                            }
-                        }}
-                    >
-                        <IoIosInformationCircleOutline
-                            size={22}
-                            color={`${isActive('/aboutme') && 'white'}`}
-                        />
-                        <span
-                            className={`text-lg transition-text duration-300 transform absolute ${!isText ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[-5px]'} ease-in-out`}
-                            style={{ visibility: !isText ? 'visible' : 'hidden', left: '35px' }}
-                        >
+                    <a href="#about" onClick={(e) => goToSection(e, '#about')} className="flex items-center gap-3 w-full text-xl py-3 relative">
+                        <IoIosInformationCircleOutline size={22} />
+                        <span className={`absolute left-[35px] ${!isText ? 'opacity-100' : 'opacity-0'}`}>
                             About Me
                         </span>
-                    </Link>
+                    </a>
                 </li>
+
                 <li className={`h-[52px] flex items-center mb-2 px-4 ${isActive('/experience')}`}>
-                    <Link
-                        href="/experience"
-                        className={`flex items-center gap-3 w-full text-xl cursor-pointer py-3 font-normal relative`}
-                        onClick={() => {
-                            if (isSmallDisplay && !isOpen) {
-                                toggleMenu();
-                            }
-                        }}
-                    >
-                        <RiStairsFill size={22} color={`${isActive('/experience') && 'white'}`} />
-                        <span
-                            className={`text-lg transition-text duration-300 transform absolute ${!isText ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[-5px]'} ease-in-out`}
-                            style={{ visibility: !isText ? 'visible' : 'hidden', left: '35px' }}
-                        >
+                    <a href="#experience" onClick={(e) => goToSection(e, '#experience')} className="flex items-center gap-3 w-full text-xl py-3 relative">
+                        <RiStairsFill size={22} />
+                        <span className={`absolute left-[35px] ${!isText ? 'opacity-100' : 'opacity-0'}`}>
                             Experience
                         </span>
-                    </Link>
+                    </a>
                 </li>
+
                 <li className={`h-[52px] flex items-center mb-2 px-4 ${isActive('/resume')}`}>
-                    <Link
-                        href="/resume"
-                        className={`flex items-center gap-3 w-full text-xl cursor-pointer py-3 font-normal relative`}
-                        onClick={() => {
-                            if (isSmallDisplay && !isOpen) {
-                                toggleMenu();
-                            }
-                        }}
-                    >
-                        <LiaFilePdf size={22} color={`${isActive('/resume') && 'white'}`} />
-                        <span
-                            className={`text-lg transition-text duration-300 transform absolute ${!isText ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[-5px]'} ease-in-out`}
-                            style={{ visibility: !isText ? 'visible' : 'hidden', left: '35px' }}
-                        >
+                    <a href="/resume.pdf" onClick={closeSidebarOnMobile} className="flex items-center gap-3 w-full text-xl py-3 relative">
+                        <LiaFilePdf size={22} />
+                        <span className={`absolute left-[35px] ${!isText ? 'opacity-100' : 'opacity-0'}`}>
                             Resume
                         </span>
-                    </Link>
+                    </a>
                 </li>
+
                 <li className={`h-[52px] flex items-center mb-2 px-4 ${isActive('/skills')}`}>
-                    <Link
-                        href="/skills"
-                        className={`flex items-center gap-3 w-full text-xl cursor-pointer py-3 font-normal relative`}
-                        onClick={() => {
-                            if (isSmallDisplay && !isOpen) {
-                                toggleMenu();
-                            }
-                        }}
-                    >
-                        <IoGitNetworkSharp size={22} color={`${isActive('/skills') && 'white'}`} />
-                        <span
-                            className={`text-lg transition-text duration-300 transform absolute ${!isText ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[-5px]'} ease-in-out`}
-                            style={{ visibility: !isText ? 'visible' : 'hidden', left: '35px' }}
-                        >
+                    <a href="#skills" onClick={(e) => goToSection(e, '#skills')} className="flex items-center gap-3 w-full text-xl py-3 relative">
+                        <IoGitNetworkSharp size={22} />
+                        <span className={`absolute left-[35px] ${!isText ? 'opacity-100' : 'opacity-0'}`}>
                             Skills
                         </span>
-                    </Link>
+                    </a>
                 </li>
+
                 <li className={`h-[52px] flex items-center mb-2 px-4 ${isActive('/projects')}`}>
-                    <Link
-                        href="/projects"
-                        className={`flex items-center gap-3 w-full text-xl cursor-pointer py-3 font-normal relative`}
-                        onClick={() => {
-                            if (isSmallDisplay && !isOpen) {
-                                toggleMenu();
-                            }
-                        }}
-                    >
-                        <MdLaptopChromebook
-                            size={22}
-                            color={`${isActive('/projects') && 'white'}`}
-                        />
-                        <span
-                            className={`text-lg transition-text duration-300 transform absolute ${!isText ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[-5px]'} ease-in-out`}
-                            style={{ visibility: !isText ? 'visible' : 'hidden', left: '35px' }}
-                        >
+                    <a href="#projects" onClick={(e) => goToSection(e, '#projects')} className="flex items-center gap-3 w-full text-xl py-3 relative">
+                        <MdLaptopChromebook size={22} />
+                        <span className={`absolute left-[35px] ${!isText ? 'opacity-100' : 'opacity-0'}`}>
                             Projects
                         </span>
-                    </Link>
+                    </a>
                 </li>
-                <li
-                    className={`h-[52px] flex items-center mb-2 px-4 ${isActive('/certifications')}`}
-                >
-                    <Link
-                        href="/certifications"
-                        className={`flex items-center gap-3 w-full text-xl cursor-pointer py-3 font-normal relative`}
-                        onClick={() => {
-                            if (isSmallDisplay && !isOpen) {
-                                toggleMenu();
-                            }
-                        }}
-                    >
-                        <PiNewspaperClippingLight
-                            size={22}
-                            color={`${isActive('/certifications') && 'white'}`}
-                        />
-                        <span
-                            className={`text-lg transition-text duration-300 transform absolute ${!isText ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[-5px]'} ease-in-out`}
-                            style={{ visibility: !isText ? 'visible' : 'hidden', left: '35px' }}
-                        >
+
+                <li className={`h-[52px] flex items-center mb-2 px-4 ${isActive('/certifications')}`}>
+                    <a href="#certifications" onClick={(e) => goToSection(e, '#certifications')} className="flex items-center gap-3 w-full text-xl py-3 relative">
+                        <PiNewspaperClippingLight size={22} />
+                        <span className={`absolute left-[35px] ${!isText ? 'opacity-100' : 'opacity-0'}`}>
                             Certifications
                         </span>
-                    </Link>
+                    </a>
                 </li>
+
                 <li className={`h-[52px] flex items-center mb-2 px-4 ${isActive('/achivements')}`}>
-                    <Link
-                        href="/achivements"
-                        className={`flex items-center gap-3 w-full text-xl cursor-pointer py-3 font-normal relative`}
-                        onClick={() => {
-                            if (isSmallDisplay && !isOpen) {
-                                toggleMenu();
-                            }
-                        }}
-                    >
-                        <LiaCertificateSolid
-                            size={22}
-                            color={`${isActive('/achivements') && 'white'}`}
-                        />
-                        <span
-                            className={`text-lg transition-text duration-300 transform absolute ${!isText ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[-5px]'} ease-in-out`}
-                            style={{ visibility: !isText ? 'visible' : 'hidden', left: '35px' }}
-                        >
+                    <a href="#achievements" onClick={(e) => goToSection(e, '#achievements')} className="flex items-center gap-3 w-full text-xl py-3 relative">
+                        <LiaCertificateSolid size={22} />
+                        <span className={`absolute left-[35px] ${!isText ? 'opacity-100' : 'opacity-0'}`}>
                             Achievements
                         </span>
-                    </Link>
+                    </a>
                 </li>
-                <li
-                    className={`h-[52px] flex items-center mb-2 px-4 ${isActive('/youtubegallery')}`}
-                >
-                    <Link
-                        href="/youtubegallery"
-                        className={`flex items-center gap-3 w-full text-xl cursor-pointer py-3 font-normal relative`}
-                        onClick={() => {
-                            if (isSmallDisplay && !isOpen) {
-                                toggleMenu();
-                            }
-                        }}
-                    >
-                        <FaYoutube size={22} color={`${isActive('/youtubegallery') && 'white'}`} />
-                        <span
-                            className={`text-lg transition-text duration-300 transform absolute ${!isText ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[-5px]'} ease-in-out`}
-                            style={{ visibility: !isText ? 'visible' : 'hidden', left: '35px' }}
-                        >
+
+                <li className={`h-[52px] flex items-center mb-2 px-4 ${isActive('/youtubegallery')}`}>
+                    <a href="#youtube" onClick={(e) => goToSection(e, '#youtube')} className="flex items-center gap-3 w-full text-xl py-3 relative">
+                        <FaYoutube size={22} />
+                        <span className={`absolute left-[35px] ${!isText ? 'opacity-100' : 'opacity-0'}`}>
                             YouTube Gallery
                         </span>
-                    </Link>
+                    </a>
                 </li>
+
                 <li className={`h-[52px] flex items-center mb-2 px-4 ${isActive('/contact')}`}>
-                    <Link
-                        href="/contact"
-                        className={`flex items-center gap-3 w-full text-xl cursor-pointer py-3 font-normal relative`}
-                        onClick={() => {
-                            if (isSmallDisplay && !isOpen) {
-                                toggleMenu();
-                            }
-                        }}
-                    >
-                        <AiOutlineContacts size={22} color={`${isActive('/contact') && 'white'}`} />
-                        <span
-                            className={`text-lg transition-text duration-300 transform absolute ${!isText ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[-5px]'} ease-in-out`}
-                            style={{ visibility: !isText ? 'visible' : 'hidden', left: '35px' }}
-                        >
+                    <a href="#contact" onClick={(e) => goToSection(e, '#contact')} className="flex items-center gap-3 w-full text-xl py-3 relative">
+                        <AiOutlineContacts size={22} />
+                        <span className={`absolute left-[35px] ${!isText ? 'opacity-100' : 'opacity-0'}`}>
                             Contact
                         </span>
-                    </Link>
+                    </a>
                 </li>
             </ul>
         </div>
