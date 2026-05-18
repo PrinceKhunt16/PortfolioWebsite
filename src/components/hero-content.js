@@ -62,7 +62,7 @@ const HeroContent = () => {
                     transition={{ duration: 0.8, delay: 0.5 }}
                     className="text-base md:text-lg text-[var(--text-muted)] mb-10 max-w-2xl mx-auto leading-relaxed"
                 >
-                    LOOKING FOR JOB (AI ROLE) || 2x Intern || ML || DL || GenAI || MERN || KAGGLE 2x
+                    2x Intern || ML || DL || GenAI || MERN || KAGGLE 2x
                     Expert || 1x Hackathon Winner
                 </motion.p>
 
