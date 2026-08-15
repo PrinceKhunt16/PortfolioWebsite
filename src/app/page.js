@@ -1,5 +1,6 @@
 'use client';
 
+import TickerBar from '@/components/ticker-bar';
 import Navbar from '@/components/navbar-block';
 import HeroContent from '@/components/hero-content';
 import AboutContent from '@/components/about-content';
@@ -16,6 +17,7 @@ import Footer from '@/components/footer-block';
 const HomePage = () => {
     return (
         <>
+            <TickerBar />
             <Navbar />
             <main>
                 <HeroContent />

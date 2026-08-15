@@ -209,8 +209,8 @@ const ProjectCard = ({ project, featured }) => {
 
     return (
         <ClipCard
-            border={featured ? 'bg-amber-300 dark:bg-amber-400' : 'bg-border'}
-            outerClassName="[--notch:22px] h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_30px_60px_-30px_rgb(28_25_23_/0.3)]"
+            border={featured ? 'border-accent-clip' : 'bg-border'}
+            outerClassName="[--notch:22px] h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_30px_60px_-30px_var(--shadow-tint)]"
             className="group flex h-full flex-col bg-card [--notch:22px]"
         >
             {/* media */}
@@ -233,7 +233,7 @@ const ProjectCard = ({ project, featured }) => {
                                 aria-label={`Show screenshot ${i + 1}`}
                                 className={`h-7 w-10 flex-shrink-0 overflow-hidden ring-1 transition-all ${
                                     mainImage === img
-                                        ? 'opacity-100 ring-amber-400'
+                                        ? 'opacity-100 ring-primary'
                                         : 'opacity-60 ring-transparent hover:opacity-100'
                                 }`}
                             >
@@ -267,7 +267,7 @@ const ProjectCard = ({ project, featured }) => {
                             key={i}
                             className="flex gap-2 text-sm leading-relaxed text-muted-foreground"
                         >
-                            <span className="mt-1.5 size-1.5 flex-shrink-0 rounded-full bg-amber-500/70" />
+                            <span className="mt-1.5 size-1.5 flex-shrink-0 rounded-full bg-primary/70" />
                             {point}
                         </li>
                     ))}
@@ -277,7 +277,7 @@ const ProjectCard = ({ project, featured }) => {
                     {project.techstack.map((tech) => (
                         <span
                             key={tech}
-                            className="font-geom bg-accent/70 px-2.5 py-1 text-xs font-medium text-accent-foreground ring-1 ring-amber-500/10"
+                            className="font-geom bg-accent/70 px-2.5 py-1 text-xs font-medium text-accent-foreground ring-1 ring-primary/20"
                         >
                             {tech}
                         </span>
@@ -292,10 +292,10 @@ const ProjectCard = ({ project, featured }) => {
                                 href={link.url}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center gap-1 text-sm font-medium text-foreground transition-colors hover:text-orange-500"
+                                className="inline-flex items-center gap-1 text-sm font-medium text-foreground transition-colors hover:text-accent-2"
                             >
                                 {link.title}
-                                <PiArrowUpRight className="size-3.5 text-orange-500" />
+                                <PiArrowUpRight className="size-3.5 text-accent-2" />
                             </a>
                         ))}
                     </div>
@@ -307,7 +307,7 @@ const ProjectCard = ({ project, featured }) => {
 
 const ProjectsContent = () => {
     return (
-        <section id="projects" className="bg-muted/30 px-4 py-24 sm:px-6 sm:py-32 lg:px-8">
+        <section id="projects" className="sec sec-1 px-4 py-24 sm:px-6 sm:py-32 lg:px-8">
             <div className="mx-auto max-w-6xl">
                 <SectionHeading
                     eyebrow="Projects"

@@ -42,12 +42,12 @@ const ContactContent = () => {
     };
 
     return (
-        <section id="contact" className="px-4 py-24 sm:px-6 sm:py-32 lg:px-8">
+        <section id="contact" className="sec sec-2 px-4 py-24 sm:px-6 sm:py-32 lg:px-8">
             <div className="mx-auto max-w-4xl">
                 <SectionHeading
                     eyebrow="Contact"
                     title="Let's build something"
-                    subtitle="Reach out or connect with me on any platform — I usually reply fast."
+                    subtitle="I work remotely with startups and small teams across the US and Europe — AI MVPs, GenAI and LLM apps, prototypes, and small projects shipped fast. Reach out on any platform; I usually reply within a day."
                 />
 
                 {/* Socials */}

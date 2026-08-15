@@ -2,7 +2,7 @@ import { PiArrowRight } from 'react-icons/pi';
 
 /**
  * ⭐ ClipButton — the notched CTA. Echoes the cut-corner card geometry on a button:
- * an outer clip-mini-notch amber border layer wrapping an inner clip-mini-notch fill.
+ * an outer clip-mini-notch accent border layer wrapping an inner clip-mini-notch fill.
  * This is the preferred PRIMARY CTA across the portfolio.
  */
 export function ClipButton({
@@ -13,7 +13,7 @@ export function ClipButton({
     target,
     type = 'button',
     notch = '10px',
-    border = 'bg-amber-300 dark:bg-amber-400',
+    border = 'border-accent-clip',
     className = '',
     innerClassName = '',
 }) {
@@ -72,7 +72,7 @@ export function PillButton({
         'group inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold transition-all duration-300';
     const variants = {
         primary:
-            'bg-foreground text-background shadow-[0_12px_34px_-10px_rgb(28_25_23_/0.55)] hover:bg-foreground/90',
+            'bg-foreground text-background shadow-[0_12px_34px_-10px_var(--shadow-tint)] hover:bg-foreground/90',
         secondary:
             'border border-border bg-background/70 text-foreground shadow-sm backdrop-blur hover:border-foreground/30 hover:bg-background',
     };

@@ -43,7 +43,7 @@ const experiences = [
 
 const ExperienceContent = () => {
     return (
-        <section id="experience" className="px-4 py-24 sm:px-6 sm:py-32 lg:px-8">
+        <section id="experience" className="sec sec-2 px-4 py-24 sm:px-6 sm:py-32 lg:px-8">
             <div className="mx-auto max-w-4xl">
                 <SectionHeading
                     eyebrow="Experience"
@@ -53,20 +53,20 @@ const ExperienceContent = () => {
 
                 <div className="relative">
                     {/* timeline line */}
-                    <div className="absolute top-2 bottom-2 left-[15px] w-px bg-gradient-to-b from-amber-500 via-orange-400 to-transparent md:left-[19px]" />
+                    <div className="absolute top-2 bottom-2 left-[15px] w-px bg-accent-line-y md:left-[19px]" />
 
                     <div className="space-y-8">
                         {experiences.map((exp, index) => (
                             <Reveal key={index} delay={index * 0.08} className="relative pl-12 md:pl-16">
                                 {/* timeline node */}
-                                <div className="absolute top-1 left-0 flex size-8 items-center justify-center rounded-full bg-background ring-1 ring-amber-400 md:size-10">
-                                    <span className="flex size-6 items-center justify-center rounded-full bg-amber-400 text-foreground md:size-7">
+                                <div className="absolute top-1 left-0 flex size-8 items-center justify-center rounded-full bg-background ring-1 ring-primary md:size-10">
+                                    <span className="flex size-6 items-center justify-center rounded-full bg-primary text-foreground md:size-7">
                                         <PiBriefcase className="size-3.5" />
                                     </span>
                                 </div>
 
                                 <ClipCard
-                                    outerClassName="[--notch:18px] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_50px_-24px_rgb(28_25_23_/0.25)]"
+                                    outerClassName="[--notch:18px] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_50px_-24px_var(--shadow-tint)]"
                                     className="bg-card p-6 [--notch:18px]"
                                 >
                                     <div className="mb-3 flex flex-col gap-1.5 sm:flex-row sm:items-center sm:justify-between">
@@ -82,10 +82,10 @@ const ExperienceContent = () => {
                                         href={exp.companyUrl}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="inline-flex items-center gap-1 bg-gradient-to-r from-amber-600 to-orange-500 bg-clip-text font-medium text-transparent hover:underline"
+                                        className="inline-flex items-center gap-1 text-gradient-accent font-medium hover:underline"
                                     >
                                         {exp.company}
-                                        <PiArrowUpRight className="size-3.5 text-orange-500" />
+                                        <PiArrowUpRight className="size-3.5 text-accent-2" />
                                     </a>
                                     <p className="mt-1 text-sm text-muted-foreground">
                                         {exp.location}
@@ -97,7 +97,7 @@ const ExperienceContent = () => {
                                                 key={i}
                                                 className="flex gap-2.5 text-sm leading-relaxed text-muted-foreground"
                                             >
-                                                <span className="mt-1.5 size-1.5 flex-shrink-0 rounded-full bg-amber-500" />
+                                                <span className="mt-1.5 size-1.5 flex-shrink-0 rounded-full bg-primary" />
                                                 {point}
                                             </li>
                                         ))}

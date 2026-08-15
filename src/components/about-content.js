@@ -8,10 +8,10 @@ import ClipCard from './ui/clip-card';
 import { ClipOutlineButton } from './ui/buttons';
 
 const stats = [
-    { value: '2x', label: 'Internships', tone: 'amber' },
+    { value: '2x', label: 'Internships', tone: 'maroon' },
     { value: '9+', label: 'Shipped projects', tone: 'blue' },
-    { value: '2x', label: 'Kaggle Expert', tone: 'green' },
-    { value: '1x', label: 'Hackathon win', tone: 'purple' },
+    { value: '2x', label: 'Kaggle Expert', tone: 'coffee' },
+    { value: '1x', label: 'Hackathon win', tone: 'plum' },
 ];
 
 const highlights = [
@@ -28,15 +28,15 @@ const socials = [
 ];
 
 const toneMap = {
-    amber: 'bg-metric-amber-bg text-metric-amber-fg',
-    blue: 'bg-metric-blue-bg text-metric-blue-fg',
-    green: 'bg-metric-green-bg text-metric-green-fg',
-    purple: 'bg-metric-purple-bg text-metric-purple-fg',
+    maroon: 'bg-metric-1-bg text-metric-1-fg',
+    blue: 'bg-metric-2-bg text-metric-2-fg',
+    coffee: 'bg-metric-3-bg text-metric-3-fg',
+    plum: 'bg-metric-4-bg text-metric-4-fg',
 };
 
 const AboutContent = () => {
     return (
-        <section id="about" className="px-4 py-24 sm:px-6 sm:py-32 lg:px-8">
+        <section id="about" className="sec sec-2 px-4 py-24 sm:px-6 sm:py-32 lg:px-8">
             <div className="mx-auto max-w-6xl">
                 <SectionHeading
                     eyebrow="About"
@@ -74,7 +74,7 @@ const AboutContent = () => {
                                     key={h}
                                     className="flex items-center gap-2.5 text-sm text-foreground/90"
                                 >
-                                    <span className="flex size-5 flex-shrink-0 items-center justify-center rounded-full bg-emerald-500/15 text-emerald-600 ring-1 ring-emerald-500/30 dark:text-emerald-400">
+                                    <span className="flex size-5 flex-shrink-0 items-center justify-center rounded-full bg-primary/15 text-primary ring-1 ring-primary/30">
                                         <PiCheck className="size-3" />
                                     </span>
                                     {h}
@@ -102,7 +102,7 @@ const AboutContent = () => {
                         {stats.map((s, i) => (
                             <ClipCard
                                 key={s.label}
-                                border={i === 0 ? 'bg-amber-300 dark:bg-amber-400' : 'bg-border'}
+                                border={i === 0 ? 'border-accent-clip' : 'bg-border'}
                                 outerClassName="[--notch:18px] transition-transform duration-300 hover:-translate-y-1"
                                 className={`${toneMap[s.tone]} flex flex-col justify-center p-6 [--notch:18px]`}
                             >

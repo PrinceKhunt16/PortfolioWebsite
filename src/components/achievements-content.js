@@ -17,7 +17,7 @@ const achievements = [
 
 const AchievementsContent = () => {
     return (
-        <section id="achievements" className="px-4 py-24 sm:px-6 sm:py-32 lg:px-8">
+        <section id="achievements" className="sec sec-2 px-4 py-24 sm:px-6 sm:py-32 lg:px-8">
             <div className="mx-auto max-w-6xl">
                 <SectionHeading
                     eyebrow="Achievements"
@@ -29,8 +29,8 @@ const AchievementsContent = () => {
                     {achievements.map((achievement, index) => (
                         <Reveal key={index}>
                             <ClipCard
-                                border="bg-amber-300 dark:bg-amber-400"
-                                outerClassName="[--notch:22px] h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_30px_60px_-30px_rgb(28_25_23_/0.3)]"
+                                border="border-accent-clip"
+                                outerClassName="[--notch:22px] h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_30px_60px_-30px_var(--shadow-tint)]"
                                 className="group flex h-full flex-col bg-card [--notch:22px]"
                             >
                                 <div
@@ -44,7 +44,7 @@ const AchievementsContent = () => {
                                         alt={achievement.title}
                                         className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                                     />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-stone-900/60 to-transparent" />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-[oklch(0.12_0.03_15_/_0.7)] to-transparent" />
                                 </div>
                                 <div className="flex flex-1 flex-col p-6">
                                     <h3 className="font-geom text-base font-semibold leading-relaxed text-foreground">
@@ -54,7 +54,7 @@ const AchievementsContent = () => {
                                         {achievement.highlights.map((h, i) => (
                                             <span
                                                 key={i}
-                                                className="font-geom bg-accent/70 px-3 py-1 text-xs font-medium text-accent-foreground ring-1 ring-amber-500/10"
+                                                className="font-geom bg-accent/70 px-3 py-1 text-xs font-medium text-accent-foreground ring-1 ring-primary/20"
                                             >
                                                 {h}
                                             </span>
@@ -68,10 +68,10 @@ const AchievementsContent = () => {
                     {/* Kaggle Expert highlight */}
                     <Reveal delay={0.1}>
                         <ClipCard
-                            outerClassName="[--notch:22px] h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_30px_60px_-30px_rgb(28_25_23_/0.3)]"
+                            outerClassName="[--notch:22px] h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_30px_60px_-30px_var(--shadow-tint)]"
                             className="flex h-full flex-col items-center justify-center bg-card p-10 text-center [--notch:22px]"
                         >
-                            <div className="flex size-16 items-center justify-center rounded-full bg-amber-400/15 text-3xl text-amber-500 ring-1 ring-amber-400/30">
+                            <div className="flex size-16 items-center justify-center rounded-full bg-primary/15 text-3xl text-primary ring-1 ring-primary/30">
                                 <PiTrophy />
                             </div>
                             <h3 className="font-caprasimo mt-5 text-3xl text-foreground">
@@ -87,7 +87,7 @@ const AchievementsContent = () => {
                                 innerClassName="px-5 py-2.5"
                             >
                                 <span className="font-geom font-semibold">View Kaggle Profile</span>
-                                <PiArrowUpRight className="size-4 text-amber-500" />
+                                <PiArrowUpRight className="size-4 text-primary" />
                             </ClipOutlineButton>
                         </ClipCard>
                     </Reveal>

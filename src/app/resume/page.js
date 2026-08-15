@@ -3,8 +3,19 @@ import { PiArrowLeft, PiDownloadSimple } from 'react-icons/pi';
 import { ClipButton } from '@/components/ui/buttons';
 
 export const metadata = {
-    title: 'Resume | Prince Khunt',
-    description: 'View and download the resume of Prince Khunt.',
+    title: 'Resume',
+    description:
+        'Resume of Prince Khunt — AI / ML Engineer and full-stack developer. Experience in GenAI, deep learning, computer vision, MLOps, and the MERN stack. View online or download as PDF.',
+    alternates: {
+        canonical: 'https://princekhunt16.github.io/PortfolioWebsite/resume/',
+    },
+    openGraph: {
+        title: 'Resume — Prince Khunt, AI / ML Engineer',
+        description:
+            'Resume of Prince Khunt — AI / ML Engineer and full-stack developer. View online or download as PDF.',
+        url: 'https://princekhunt16.github.io/PortfolioWebsite/resume/',
+        type: 'profile',
+    },
 };
 
 const ResumePage = () => {
@@ -15,7 +26,7 @@ const ResumePage = () => {
                 <div className="mx-auto flex h-16 max-w-5xl items-center justify-between gap-4 px-4 sm:px-6">
                     <Link
                         href="/"
-                        className="inline-flex items-center gap-2 text-sm text-stone-600 transition-colors hover:text-primary dark:text-stone-300 dark:hover:text-primary"
+                        className="inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-primary"
                     >
                         <PiArrowLeft className="size-4" />
                         Back to portfolio

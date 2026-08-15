@@ -84,7 +84,7 @@ const CertificationsContent = () => {
     return (
         <section
             id="certifications"
-            className="bg-muted/30 px-4 py-24 sm:px-6 sm:py-32 lg:px-8"
+            className="sec sec-1 px-4 py-24 sm:px-6 sm:py-32 lg:px-8"
         >
             <div className="mx-auto max-w-6xl">
                 <SectionHeading
@@ -97,7 +97,7 @@ const CertificationsContent = () => {
                     {certifications.map((cert, index) => (
                         <Reveal key={index} delay={(index % 3) * 0.07} className="h-full">
                             <ClipCard
-                                outerClassName="[--notch:18px] h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_50px_-24px_rgb(28_25_23_/0.25)]"
+                                outerClassName="[--notch:18px] h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_50px_-24px_var(--shadow-tint)]"
                                 className="group flex h-full flex-col bg-card [--notch:18px]"
                             >
                                 <div
@@ -117,7 +117,7 @@ const CertificationsContent = () => {
                                         {cert.title}
                                     </h3>
                                     <div className="mt-auto flex items-center justify-between pt-3 text-xs text-muted-foreground">
-                                        <span className="font-medium text-amber-600 dark:text-amber-400">
+                                        <span className="font-medium text-primary">
                                             {cert.issuedBy}
                                         </span>
                                         <span>{cert.issuedDate}</span>

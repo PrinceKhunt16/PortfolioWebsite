@@ -90,7 +90,7 @@ const skillCategories = [
 
 const SkillsContent = () => {
     return (
-        <section id="skills" className="px-4 py-24 sm:px-6 sm:py-32 lg:px-8">
+        <section id="skills" className="sec sec-2 px-4 py-24 sm:px-6 sm:py-32 lg:px-8">
             <div className="mx-auto max-w-6xl">
                 <SectionHeading
                     eyebrow="Skills"
@@ -106,9 +106,9 @@ const SkillsContent = () => {
                                     {category.skills.map((skill) => (
                                         <span
                                             key={skill.name}
-                                            className="font-geom inline-flex items-center gap-1.5 bg-background/70 px-2.5 py-1 text-xs font-medium text-foreground/80 ring-1 ring-stone-200/70 dark:ring-white/10"
+                                            className="font-geom inline-flex items-center gap-1.5 bg-background/70 px-2.5 py-1 text-xs font-medium text-foreground/80 ring-1 ring-[var(--ring-subtle)]"
                                         >
-                                            <span className="text-sm text-amber-600 dark:text-amber-400">
+                                            <span className="text-sm text-primary">
                                                 {skill.icon}
                                             </span>
                                             {skill.name}

@@ -63,9 +63,9 @@ const Navbar = () => {
 
     return (
         <nav
-            className={`fixed inset-x-0 top-0 z-50 border-y transition-all duration-300 ${
+            className={`fixed inset-x-0 top-9 z-50 border-y transition-all duration-300 ${
                 scrolled
-                    ? 'border-stone-200/80 bg-background/80 shadow-[0_8px_30px_rgb(28_25_23_/0.06)] backdrop-blur-xl dark:border-white/10'
+                    ? 'border-border bg-background/80 shadow-[0_8px_30px_var(--shadow-tint-soft)] backdrop-blur-xl'
                     : 'border-transparent bg-background/55 backdrop-blur-md'
             }`}
         >
@@ -92,7 +92,7 @@ const Navbar = () => {
                                 className={`px-3.5 py-2 text-sm transition-colors ${
                                     active === item.href
                                         ? 'font-semibold text-primary'
-                                        : 'text-stone-600 hover:text-primary dark:text-stone-300 dark:hover:text-primary'
+                                        : 'text-muted-foreground hover:text-primary'
                                 }`}
                             >
                                 {item.label}
@@ -105,7 +105,7 @@ const Navbar = () => {
                         <ThemeToggle />
                         <Link
                             href="/resume"
-                            className="hidden px-3.5 py-2 text-sm text-stone-600 transition-colors hover:text-primary focus-visible:text-primary dark:text-stone-300 dark:hover:text-primary sm:inline-flex"
+                            className="hidden px-3.5 py-2 text-sm text-muted-foreground transition-colors hover:text-primary focus-visible:text-primary sm:inline-flex"
                         >
                             Resume
                         </Link>
@@ -146,7 +146,7 @@ const Navbar = () => {
             <div
                 className={`overflow-hidden border-t transition-all duration-300 ease-in-out xl:hidden ${
                     mobileOpen
-                        ? 'max-h-[600px] border-stone-200/80 opacity-100 dark:border-white/10'
+                        ? 'max-h-[600px] border-border opacity-100'
                         : 'max-h-0 border-transparent opacity-0'
                 }`}
             >
@@ -160,7 +160,7 @@ const Navbar = () => {
                                 className={`px-4 py-2.5 text-sm transition-colors ${
                                     active === item.href
                                         ? 'font-semibold text-primary'
-                                        : 'text-stone-600 hover:text-primary dark:text-stone-300 dark:hover:text-primary'
+                                        : 'text-muted-foreground hover:text-primary'
                                 }`}
                             >
                                 {item.label}
@@ -169,7 +169,7 @@ const Navbar = () => {
                         <Link
                             href="/resume"
                             onClick={() => setMobileOpen(false)}
-                            className="mt-2 px-4 py-2.5 text-sm text-stone-600 transition-colors hover:text-primary dark:text-stone-300 dark:hover:text-primary"
+                            className="mt-2 px-4 py-2.5 text-sm text-muted-foreground transition-colors hover:text-primary"
                         >
                             Resume
                         </Link>

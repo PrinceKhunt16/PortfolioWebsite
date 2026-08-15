@@ -21,7 +21,7 @@ const videos = [
 
 const YouTubeContent = () => {
     return (
-        <section id="youtube" className="bg-muted/30 px-4 py-24 sm:px-6 sm:py-32 lg:px-8">
+        <section id="youtube" className="sec sec-1 px-4 py-24 sm:px-6 sm:py-32 lg:px-8">
             <div className="mx-auto max-w-6xl">
                 <SectionHeading
                     eyebrow="YouTube"
@@ -33,7 +33,7 @@ const YouTubeContent = () => {
                     {videos.map((video, index) => (
                         <Reveal key={index} delay={index * 0.08}>
                             <ClipCard
-                                outerClassName="[--notch:20px] h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_50px_-24px_rgb(28_25_23_/0.25)]"
+                                outerClassName="[--notch:20px] h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_50px_-24px_var(--shadow-tint)]"
                                 className="flex h-full flex-col bg-card [--notch:20px]"
                             >
                                 <div className="relative" style={{ aspectRatio: '16 / 9' }}>

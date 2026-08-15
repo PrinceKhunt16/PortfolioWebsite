@@ -9,7 +9,7 @@ const EducationContent = () => {
     return (
         <section
             id="education"
-            className="bg-muted/30 px-4 py-24 sm:px-6 sm:py-32 lg:px-8"
+            className="sec sec-1 px-4 py-24 sm:px-6 sm:py-32 lg:px-8"
         >
             <div className="mx-auto max-w-6xl">
                 <SectionHeading
@@ -20,8 +20,8 @@ const EducationContent = () => {
 
                 <Reveal className="mx-auto max-w-2xl">
                     <ClipCard
-                        border="bg-amber-300 dark:bg-amber-400"
-                        outerClassName="[--notch:20px] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_50px_-24px_rgb(28_25_23_/0.3)]"
+                        border="border-accent-clip"
+                        outerClassName="[--notch:20px] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_50px_-24px_var(--shadow-tint)]"
                         className="bg-card p-7 [--notch:20px]"
                     >
                         <div className="flex items-start gap-5">
@@ -38,7 +38,7 @@ const EducationContent = () => {
                                 <h3 className="font-geom text-xl font-semibold tracking-tight text-foreground">
                                     Marwadi University
                                 </h3>
-                                <p className="mt-1 bg-gradient-to-r from-amber-600 to-orange-500 bg-clip-text font-medium text-transparent">
+                                <p className="mt-1 text-gradient-accent font-medium">
                                     Bachelor&apos;s of Science in Data Science
                                 </p>
                                 <p className="mt-2 text-sm text-muted-foreground">
