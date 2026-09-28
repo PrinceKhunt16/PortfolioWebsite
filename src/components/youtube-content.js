@@ -8,6 +8,11 @@ import { ClipOutlineButton } from './ui/buttons';
 
 const videos = [
     {
+        name: 'Rewrite Any Text in One Shortcut / WriteProMax (Free Chrome Extension)',
+        url: 'https://www.youtube.com/embed/DGFPHOIoNy0',
+        watchUrl: 'https://www.youtube.com/watch?v=DGFPHOIoNy0',
+    },
+    {
         name: 'LinkedIn Chat Assistant Extension / Demo / Features Explained / prince khunt',
         url: 'https://www.youtube.com/embed/k2ERRWbyfc8',
         watchUrl: 'https://www.youtube.com/watch?v=k2ERRWbyfc8',

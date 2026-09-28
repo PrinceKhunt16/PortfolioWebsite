@@ -23,8 +23,8 @@ const HomePage = () => {
                 <HeroContent />
                 <AboutContent />
                 <EducationContent />
-                <ExperienceContent />
                 <ProjectsContent />
+                <ExperienceContent />
                 <SkillsContent />
                 <CertificationsContent />
                 <AchievementsContent />

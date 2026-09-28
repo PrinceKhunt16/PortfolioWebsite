@@ -2,12 +2,41 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import { PiArrowUpRight, PiStar } from 'react-icons/pi';
+import { PiArrowUpRight, PiPlayFill, PiStar } from 'react-icons/pi';
 import SectionHeading from './ui/section-heading';
 import Reveal from './ui/reveal';
 import ClipCard from './ui/clip-card';
 
 const projects = [
+    {
+        title: 'WriteProMax — AI Rewriter Chrome Extension',
+        projectImages: [
+            './projects/13/WriteProMax-demo-linkedin-16x9.mp4',
+            './projects/13/screenshot-1-rewrite-in-place.png',
+            './projects/13/screenshot-2-custom-instructions.png',
+            './projects/13/screenshot-3-use-cases.png',
+            './projects/13/screenshot-4-setup.png',
+            './projects/13/screenshot-5-privacy.png',
+            './projects/13/WriteProMax-demo-thumbnail.png',
+        ],
+        videoPoster: './projects/13/WriteProMax-demo-thumbnail.png',
+        descriptionPoints: [
+            'Built a Chrome extension that rewrites selected text in place in any text box (Gmail, WhatsApp, LinkedIn, Slack) with a single ⌘⇧Space shortcut, with no copy-paste.',
+            'Added "+" custom instructions (e.g. "+ make it professional", "+ translate to Hindi"), one-keystroke undo, and preservation of names, numbers, dates, links, and technical terms.',
+            "Powered by Groq's gpt-oss-120b for sub-second rewrites, with no account needed: text goes straight from the browser to Groq using the user's own API key.",
+        ],
+        techstack: ['Chrome Extension', 'GroqCloudAPI', 'gpt-oss-120b'],
+        links: [
+            {
+                title: 'Website',
+                url: 'https://writepromax.vercel.app/',
+            },
+            {
+                title: 'Download',
+                url: 'https://chromewebstore.google.com/detail/writepromax/hlnkmckifjabbpjifdkfekhgkckcoejf',
+            },
+        ],
+    },
     {
         title: 'Customer Care — AI Support Assistant',
         projectImages: [
@@ -204,6 +233,8 @@ const projects = [
     },
 ];
 
+const isVideo = (src) => /\.(mp4|webm|mov)$/i.test(src);
+
 const ProjectCard = ({ project, featured }) => {
     const [mainImage, setMainImage] = useState(project.projectImages[0]);
 
@@ -216,13 +247,27 @@ const ProjectCard = ({ project, featured }) => {
             {/* media */}
             <div className="relative overflow-hidden bg-muted">
                 <div className="relative w-full" style={{ aspectRatio: '16 / 10' }}>
-                    <Image
-                        width={640}
-                        height={400}
-                        src={mainImage}
-                        alt={project.title}
-                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
+                    {isVideo(mainImage) ? (
+                        <video
+                            key={mainImage}
+                            src={mainImage}
+                            poster={project.videoPoster}
+                            aria-label={project.title}
+                            autoPlay
+                            muted
+                            loop
+                            playsInline
+                            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        />
+                    ) : (
+                        <Image
+                            width={640}
+                            height={400}
+                            src={mainImage}
+                            alt={project.title}
+                            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        />
+                    )}
                 </div>
                 {project.projectImages.length > 1 && (
                     <div className="absolute inset-x-0 bottom-0 flex gap-1 overflow-x-auto bg-foreground/50 p-2 backdrop-blur-sm">
@@ -230,20 +275,28 @@ const ProjectCard = ({ project, featured }) => {
                             <button
                                 key={i}
                                 onClick={() => setMainImage(img)}
-                                aria-label={`Show screenshot ${i + 1}`}
+                                aria-label={
+                                    isVideo(img) ? 'Play demo video' : `Show screenshot ${i + 1}`
+                                }
                                 className={`h-7 w-10 flex-shrink-0 overflow-hidden ring-1 transition-all ${
                                     mainImage === img
                                         ? 'opacity-100 ring-primary'
                                         : 'opacity-60 ring-transparent hover:opacity-100'
                                 }`}
                             >
-                                <Image
-                                    src={img}
-                                    alt=""
-                                    width={40}
-                                    height={28}
-                                    className="h-full w-full object-cover"
-                                />
+                                {isVideo(img) ? (
+                                    <span className="flex h-full w-full items-center justify-center bg-foreground/80">
+                                        <PiPlayFill className="size-3.5 text-white" />
+                                    </span>
+                                ) : (
+                                    <Image
+                                        src={img}
+                                        alt=""
+                                        width={40}
+                                        height={28}
+                                        className="h-full w-full object-cover"
+                                    />
+                                )}
                             </button>
                         ))}
                         {project.projectImages.length > 6 && (
