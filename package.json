@@ -10,6 +10,7 @@
         "format": "prettier --write ."
     },
     "dependencies": {
+        "@vercel/speed-insights": "^2.0.0",
         "framer-motion": "^12.35.2",
         "next": "^15.5.23",
         "next-themes": "^0.4.6",
