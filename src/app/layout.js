@@ -2,6 +2,7 @@ import './globals.css';
 import localFont from 'next/font/local';
 import { Caprasimo, Merriweather, Young_Serif } from 'next/font/google';
 import Script from 'next/script';
+import { Analytics } from '@vercel/analytics/next';
 import Providers from './providers';
 
 /* App-wide default body / UI sans (local woff2) */
@@ -356,6 +357,7 @@ export default function RootLayout({ children }) {
             </head>
             <body suppressHydrationWarning={true}>
                 <Providers>{children}</Providers>
+                <Analytics />
             </body>
         </html>
     );
